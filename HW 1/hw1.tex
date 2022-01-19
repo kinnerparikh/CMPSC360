@@ -1,0 +1,197 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: \textit{#2}
+
+\end{flushleft}}
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Assignment #1}
+            
+            CMPSC 360} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{15pt}
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[1]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+    
+    \question[1]{} 
+    
+    Since there are 8 such prime numbers that are less than 20 (2, 3, 5, 7, 11, 13, 17, 19) the power set of S has a cardinality of $2^8$, or 256 subsets
+    
+    \question[2]{}
+    
+    a. $\{ a, b, \{c, d\}, e, f, g, h \}$
+
+    b. $\{ a, b, \{c, d\}, e \}$
+
+    c. $\emptyset$
+    
+    d. $\{ f, g, h \}$
+    
+    
+    \question[3]{}
+
+    a) $\overline{A} \cup B$ by DeMorgan's Law
+
+    \tab therefore, $\overline{A} = \{0, 1, 4, 5, 8, 9, 12, 15 \}$, B = $\{ 1, 4, 5, 8, 9 \}$
+
+    \tab so $\{0, 1, 4, 5, 8, 9, 12, 15 \} \cup \{ 1, 4, 5, 8, 9 \}$
+
+    \tab = \hl{$\{ 0, 1, 4, 5, 8, 9, 12, 15 \}$}
+
+    b) $A\times(U - A - B)$
+
+    \tab so $U - A = \{0, 1, 4, 5, 8, 9, 12, 15 \}$
+
+    \tab therefore, $U - A - B = \{ 0, 12, 15 \}$
+
+    \tab so, $A \times \{ 0, 12, 15 \}$ 
+
+    \tab = \hl{$\{(2,0), (2,12), (2,15), (3,0), (3,12), (3,15), (6,0), (6,12), 
+    (6,15), (7,0), (7,12), (7,15), (10,0), (10,12), (10,15)\}$}
+
+    \question[4]{}
+
+    a) $\emptyset$
+
+    b) $\{ 9 \}$
+
+    \question[5]{}
+
+    a) $\emptyset$
+
+    b) $C \cup B = \{ 0, 1, \alpha, \beta \}$
+
+    \tab $\{ 0, 1, \alpha, \beta \} \cup A = \{0, 1, \alpha, \beta, X, Y, Z \}$
+    
+    \tab $B \times \{0, 1, \alpha, \beta, X, Y, Z \} = \{0, 1\} \times \{0, 1, \alpha, \beta, X, Y, Z \}$
+        
+    \tab = \hl{$\{ (0, 0), (0, 1), (0, \alpha), (0, \beta), (0, X), (0, Y), (0, Z), (1, 0), (1, 1), (1, \alpha), (1, \beta), (1, X), (1, Y), (1, Z)\}$}
+
+    \question[6]{}
+
+    a) 19
+
+    b) 8
+
+    \question[7]{}
+
+    $A \times C = \{ \alpha, \beta, \gamma \} \times \{6, 8\} = \{ (\alpha, 6), (\alpha, 8), (\beta, 6), (\beta, 8), (\gamma, 6), (\gamma, 8) \} $ 
+
+    $B \times C = \{ (c, 6), (c, 8), (d, 6), (d, 8), (\gamma, 6), (\gamma, 8) \}$
+
+    $\{ (\alpha, 6), (\alpha, 8), (\beta, 6), (\beta, 8), (\gamma, 6), (\gamma, 8) \} \times \{ (c, 6), (c, 8), (d, 6), (d, 8), (\gamma, 6), (\gamma, 8) \}$
+
+    therefore $ ( A \times C ) \cap ( B \times C ) =$
+    \hl{$\{ (\gamma, 6), (\gamma, 8) \}$}
+
+    \question[8]{}
+
+    a) This is a proposition, True
+    
+    b) This is a proposition, False
+    
+    c) This is a proposition, True
+
+    \question[9]{Collaboration with Sharon Liu and Sahil Kuwadia}
+
+    Show that $\overline{\overline{A} \cap B} = A \cup \overline{B}$
+
+    Suppose x $\in{ \overline{\overline{A} \cap B}} $
+
+    By definition of the compliment: $x \notin (\overline{A} \cap B)$
+
+    By definition of set intersection: $x \notin (\overline{A}\ and\ B)$
+
+    Applying DeMorgan's Law: $x \notin \overline{A}\ or\ x \notin B$
+
+    By definition of the compliment: $x \in A\ or\ x \in \overline{B}$
+
+    By definition of set union: $x \in (A \cup \overline{B})$
+
+    so $x \in A \cup \overline{B}$
+
+    therefore, $\overline{\overline{A} \cup B} = A \cup \overline{B}$
+
+    $\smallskip$
+
+    Suppose $x \in A \cup \overline{B}$
+
+    By definition of set union: $x \in A\ or\ \overline{B}$
+
+    By definition of distribution: $x \in A\ or x \in \overline{B}$
+
+    By definition of the compliment: $x \notin \overline{A}\ or\ x \notin B$
+
+    Applying DeMorgan's Law: $x \notin (\overline{A}\ and\ B)$
+
+    By definition of set intersection: $x \notin (\overline{A} \cap B)$
+
+    By definition of the compliment: $x \in \overline{\overline{A} \cap B}$
+
+    therefore, $A \cup \overline{B} = \overline{\overline{A} \cup B}$
+
+    \newpage
+
+    \question[10]{Collaboration with Sharon Liu and Sahil Kuwadia}
+
+    $(B - A) \cup (C - A) = (B \cup C) - A$
+
+    Suppose $x \in (B - A) \cup (C - A)$
+
+    By definition of set union: $x \in (B - A)\ or\ (C - A)$
+
+    By definition of set difference: $(x \in B\ and\ x \notin A)\ or\ (x \in C\ and\ x \notin A)$
+
+    By definition of distribution: $(x \in B\ or\ x \in C)\ and\ x \notin A$
+    
+    By definition of distribution: $x \in (B\ or\ C)\ and\ x \notin A$
+
+    By definition of set intersection and set union: $x \in (B \cup C) \cap x \notin A$
+
+    By definition of the compliment: $x \in (B \cup C) \cap x \in \overline{A}$
+
+    By definition of distribution: $x \in (B \cup C) \cap \overline{A}$
+
+    By definition of set difference: $x \in (B \cup C) - A$
+
+    therefore, $(B - A) \cup (C - A) = (B \cup C) - A$
+
+    $\smallskip$
+
+    Suppose $x \in (B \cup C) - A$
+
+    By definition of set difference: $x \in (B \cup C) \cap \overline{A}$
+
+    By definition of distribution: $x \in (B \cup C) \cap x \in \overline{A}$
+
+    By definition of the compliment: $x \in (B \cup C) \cap x \notin A$
+
+    By definition of set intersection and set union: $x \in (B\ or\ C)\ and\ x \notin A$
+
+    By definition of distribution: $(x \in B\ or\ x \in C)\ and\ x \notin A$
+
+    By definition of distribution: $(x \in B\ and\ x \notin A)\ or\ (x \in C\ and\ x \notin A)$
+
+    By definition of set intersection: $(x \in B \cap x \notin A)\ or\ (x \in C \cap x \notin A)$
+
+    By definition of set difference: $x \in (B - A)\ or\ (C - A)$
+
+    By definition of set union $x \in (B - A) \cup (C - A)$
+
+    therefore, $ (B \cup C) - A = (B - A) \cup (C - A)$
+
+\end{document}
