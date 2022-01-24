@@ -64,7 +64,9 @@
 
     \question[8]{}
 
-    $\neg ((r \rightarrow \neg p) \land (r \rightarrow p))$
+    Simplify $\neg ((r \rightarrow \neg p) \land (r \rightarrow p))$
+
+    \hspace*{0.05cm}
 
     $\neg(r \rightarrow \neg p) \lor \neg(r \rightarrow p) $ \tabto*{5cm} DeMorgan's Law
 
@@ -74,7 +76,7 @@
 
     $(r \land p) \lor (r \land \neg p)$ \tabto*{5cm} Double Negation \hspace*{2cm}
 
-    $r \lor (p \land \neg p)$ \tabto*{5cm} Distributive
+    $r \lor (p \land \neg p)$ \tabto*{5cm} Distribution
     
     $r \lor F$ \tabto*{5cm} Contradiction
     
@@ -82,7 +84,35 @@
 
     \question[9]{}
 
+    Prove that $[p \rightarrow (q \lor r)] \equiv [(p \land \neg q) \rightarrow r]$
+
+    \hspace{0cm}
+
+    $p \rightarrow (q \lor r)$
+
+    $\neg p \lor (q \lor r)$ \tabto*{3.5cm} Identity Rule
     
+    $(\neg p \lor q) \lor r$ \tabto*{3.5cm} Associative Rule
+
+    $\neg (\neg \neg p \land \neg q) \lor r$ \tabto*{3.5cm} DeMorgan's Law
+
+    $\neg (p \land \neg q) \lor r$ \tabto*{3.5cm} Double Negation
+
+    \hl{$(p \land \neg q) \rightarrow r$} \tabto*{3.5cm} Identity Rule
+
+    \hspace{0cm}
+
+    $(p \land \neg q) \rightarrow r$
+
+    $\neg(p \land \neg q) \lor r$ \tabto*{3.5cm} Identity Rule
+
+    $(\neg p \lor \neg \neg q) \lor r$ \tabto*{3.5cm} DeMorgan's Law
+
+    $(\neg p \lor q) \lor r$ \tabto*{3.5cm} Double Negation
+
+    $\neg p \lor (q \lor r)$ \tabto*{3.5cm} Associative Rule
+
+    \hl{$p \rightarrow (q \lor r)$} \tabto*{3.5cm} Identity Rule
 
     \question[10]{}
 
