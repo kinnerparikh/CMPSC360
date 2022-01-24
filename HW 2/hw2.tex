@@ -16,6 +16,7 @@
 \end{flushleft}}
 
 \definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
 
 \newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
 %\newcommand\tab[1][0.4cm]{\hspace*{#1}}
@@ -39,7 +40,7 @@
     
         1. \hl{This is a statement} because the truth value of the statement can be determined: Obama was \tabto{1cm} the president during 2010 or not
 
-        2. \hl{This is a statement} becuase the quantity x + 3 could be a positive integer or not, which \tabto{1cm} means the truth value can be determined
+        2. \hl{This is not a statement} becuase x is an arbitrary value, which means the truth value of this \tabto{1cm} statement cannot be determined.
 
         3. \hl{This is a statement} because 15 is either an odd number or it is not
 
@@ -57,19 +58,19 @@
 
     \question[3]{}
 
-        1. p = the sun is shining, q = I will play tennis this afternoon $\therefore$ \hl{$p \rightarrow q$}
+        1. p = the sun is shining, q = I will play tennis this afternoon $\Rightarrow$ \hl{$p \rightarrow q$}
 
-        2. p = finishing the writing of my computer program before lunch, q = tennis playing this \tabto{0.96cm} afternoon $\Rightarrow$ \hl{$p \rightarrow q$}
+        2. p = finishing the writing of my computer program before lunch, q = tennis playing this \tabto{0.96cm} afternoon $\Rightarrow$ \hl{$q \rightarrow p$}
 
         3. p = low humidity, q = sunshine, r = I will play tennis this afternoon $\Rightarrow$ \hl{($p \land q) \rightarrow r$}
     
     \question[4]{}
 
-        a) The election is not decided or the votes have been counted
+        a) The election is not decided and the votes have been counted
 
         b) If the votes have not been counted then the election is not decided
 
-        c) The election is not decided or the election is not decided and the votes have been counted
+        c) The votes have not been counted or the election is not decided and the votes have \tabto{0.98cm} been counted
 
     \newpage
 
@@ -104,19 +105,21 @@
 
     \question[6]{}
 
-        a) $p \leftrightarrow q$
+        a) $r \rightarrow p$
 
-        b) $(p \land q)$
+        b) $(p \land \neg q) \land r$
 
         c) $(p \land q) \rightarrow r$
 
         d) $r \leftrightarrow (q \lor p)$
 
+    \newpage
+
     \question[7]{}
 
         1. $\neg[(p \land q) \rightarrow r]$
 
-        \tabto{0.98cm}$\neg[\neg(p \land q) \lor r]$ \tabto*{3.7cm} Identity Rule
+        \tabto{0.98cm}$\neg[\neg(p \land q) \lor r]$ \tabto*{3.7cm} Conditional Equivalence
 
         \tabto{0.98cm}$\neg \neg(p \land q) \land \neg r$ \tabto*{3.7cm} DeMorgan's Law
 
@@ -127,7 +130,7 @@
 
         2. $\neg[p \rightarrow (\neg q \land r)]$
 
-        \tabto{0.98cm}$\neg[\neg p \lor (\neg q \land r)]$ \tabto*{3.7cm} Identity Rule
+        \tabto{0.98cm}$\neg[\neg p \lor (\neg q \land r)]$ \tabto*{3.7cm} Conditional Equivalence
 
         \tabto{0.98cm}$\neg \neg p \land \neg (\neg q \land r)$ \tabto*{3.7cm} DeMorgan's Law
 
@@ -137,21 +140,31 @@
 
         \tabto{0.98cm}$p \land (q \lor \neg r)$ \tabto*{3.7cm} Double Negation
 
-        \tabto{0.98cm}\hl{$p \land (r \rightarrow q)$} \tabto*{3.7cm} Identity Rule
+        \tabto{0.98cm}\hl{$p \land (r \rightarrow q)$} \tabto*{3.7cm} Conditional Equivalence
 
         \hspace{0cm}
 
         3. $\neg[p \lor q \lor (\neg p \land \neg q \land r)]$
 
-        \tabto{0.98cm}$\neg p \land \neg q \land \neg (\neg p \land \neg q \land r)$ \tabto*{5.4cm} DeMorgan's Law
+        \hspace{0cm}
 
-        \tabto{0.98cm}$\neg p \land \neg q \land (\neg \neg p \lor \neg \neg q \lor \neg r)$ \tabto*{5.4cm} DeMorgan's Law
+        \tabto{0.98cm}$\neg p \land \neg q \land \neg (\neg p \land \neg q \land r)$ \tabto*{9cm} DeMorgan's Law
+        
+        \tabto{0.98cm}$\neg p \land \neg q \land (\neg \neg p \lor \neg \neg q \lor \neg r)$ \tabto*{9cm} DeMorgan's Rule
 
-        \tabto{0.98cm}$\neg p \land \neg q \land (p \lor q \lor \neg r)$ \tabto*{5.4cm} Double Negation
+        \tabto{0.98cm}$(\neg p \land \neg q) \land (\neg \neg p \lor \neg \neg q \lor \neg r)$ \tabto*{9cm} Associative Rule
 
-        \tabto{0.98cm}$\neg (p \lor q) \land (p \lor q \lor \neg r)$ \tabto*{5.4cm} DeMorgan's Law
+        \tabto{0.98cm}$(\neg p \land \neg q) \land (p \lor q \lor \neg r)$ \tabto*{9cm} Double Negation
 
-        \tabto{0.98cm} NOT DONE
+        \tabto{0.98cm}$(\neg p \land \neg q \land p) \lor (\neg p \land \neg q \land q) \lor (\neg p \land \neg q \land \neg r)$ \tabto*{9cm} Distributive Rule
+
+        \tabto{0.98cm}$[(\neg p \land p) \land \neg q] \lor [\neg p \land (\neg q \land q)] \lor (\neg p \land \neg q \land \neg r)$ \tabto*{9cm} Associative Rule
+
+        \tabto{0.98cm}$(F \land \neg q) \lor (\neg p \land F) \lor (\neg p \land \neg q \land \neg r)$ \tabto*{9cm} Contradiction
+        
+        \tabto{0.98cm}$F \lor F \lor (\neg p \land \neg q \land \neg r)$ \tabto*{9cm} Identity Rule
+
+        \tabto{0.98cm}\hl{$\neg p \land \neg q \land \neg r$} \tabto*{9cm} Identity Rules
 
     \question[8]{}
 
@@ -172,8 +185,9 @@
 
         $r \land T$ \tabto*{5cm} Tautology
 
-        $r$ \tabto*{5cm} Identity Rules
+        \hl{$r$} \tabto*{5cm} Identity Rules
 
+    \newpage
     \question[9]{}
 
         Prove that $[p \rightarrow (q \lor r)] \equiv [(p \land \neg q) \rightarrow r]$
