@@ -7,11 +7,15 @@
 \usepackage{amsfonts}
 \usepackage{dirtytalk}
 \usepackage{tabto}
+\usepackage{xcolor,colortbl}
 
 \newcommand{\question}[2][]{\begin{flushleft}
         \textbf{Question #1}: \textit{#2}
 
 \end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+
 \newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
 %\newcommand\tab[1][0.4cm]{\hspace*{#1}}
 \newcommand{\maketitletwo}[2][]{\begin{center}
@@ -58,18 +62,33 @@
 
     \question[5]{}
 
+    %\captionof{table}{$\neg$ (p $\rightarrow$ q) $\equiv$ p $\land \neg$q}
     \begin{table}[h!]
         \centering
         \caption{$\neg$ (p $\rightarrow$ q) $\equiv$ p $\land \neg$q}
-        \begin{tabular}{c | c | c | c | c}
+        \begin{tabular}{c | c | c | >{\columncolor{Green}}c |>{\columncolor{Green}} c}
             p & q & p $\rightarrow$ q & $\neg$ (p $\rightarrow$ q) & p $\land \neg$q \\
             \hline
             T & T & T & F & F \\
             T & F & F & T & T \\
-            F & T & T & F & T \\
+            F & T & T & F & F \\
             F & F & T & F & F
         \end{tabular}
     \end{table}
+
+    \begin{table}[h!]
+        \centering
+        \caption{p $\lor\ \neg$(p $\land$ q) $\equiv$ T}
+        \begin{tabular}{c | c | c | c | >{\columncolor{Green}}c}
+            p & q & p $\land$ q & $\neg$(p $\land$ q) & p $\lor\ \neg$(p $\land$ q)\\
+            \hline
+            T & T & T & F & T \\
+            T & F & F & T & T \\
+            F & T & F & T & T \\
+            F & F & F & T & T
+        \end{tabular}
+    \end{table}
+    \newpage
 
     \question[6]{}
 
@@ -81,7 +100,7 @@
 
         \tabto{0.98cm}$\neg \neg(p \land q) \land \neg r$ \tabto*{3.7cm} DeMorgan's Law
 
-        \tabto{0.98cm}$(p \land q) \land \neg r$ \tabto*{3.7cm} Double Negation
+        \tabto{0.98cm}\hl{$(p \land q) \land \neg r$} \tabto*{3.7cm} Double Negation
 
         % line break
         \hspace{0cm}
@@ -98,7 +117,7 @@
 
         \tabto{0.98cm}$p \land (q \lor \neg r)$ \tabto*{3.7cm} Double Negation
 
-        \tabto{0.98cm}$p \land (r \rightarrow q)$ \tabto*{3.7cm} Identity Rule
+        \tabto{0.98cm}\hl{$p \land (r \rightarrow q)$} \tabto*{3.7cm} Identity Rule
 
         \hspace{0cm}
 
