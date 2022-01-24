@@ -6,13 +6,14 @@
 \usepackage{soul}
 \usepackage{amsfonts}
 \usepackage{dirtytalk}
+\usepackage{tabto}
 
 \newcommand{\question}[2][]{\begin{flushleft}
         \textbf{Question #1}: \textit{#2}
 
 \end{flushleft}}
 \newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
-\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
 \newcommand{\maketitletwo}[2][]{\begin{center}
         \Large{\textbf{Homework #1}
             
@@ -31,13 +32,15 @@
     
     \question[1]{}
     
-    1. This is a statement because the truth value of the statement can be determined: Obama was the president during 2010 or not
+    1. This is a statement because the truth value of the statement can be determined: Obama was \tabto{1cm} the president during 2010 or not
 
-    2. This is a statement becuase the quantity x + 3 could be a positive integer or not, which means the truth value can be determined
+    2. This is a statement becuase the quantity x + 3 could be a positive integer or not, which \tabto{1cm} means the truth value can be determined
 
     3. This is a statement because 15 is either an odd number or it is not
 
-    4. 
+    4. This is a statement becuase a natural number times two has the possibility of being an even \tabto{1cm} number - the truth value can be determined
+
+    5. This is not a statement because it is an open ended question. There is no truth value that \tabto{1cm} can be determined.
 
     \question[2]{}
 
@@ -49,6 +52,38 @@
 
     \question[3]{}
 
-    1. a
+    1. a 
+    
+    \question[4]{}
+
+    \question[5]{}
+
+    \question[6]{}
+
+    \question[7]{}
+
+    \question[8]{}
+
+    $\neg ((r \rightarrow \neg p) \land (r \rightarrow p))$
+
+    $\neg(r \rightarrow \neg p) \lor \neg(r \rightarrow p) $ \tabto*{5cm} DeMorgan's Law
+
+    $\neg(\neg r \lor \neg p) \lor \neg( \neg r \lor p) $ \tabto*{5cm} Identity Rule
+
+    $(\neg \neg r \land \neg \neg p) \lor (\neg \neg r \land \neg p) $ \tabto*{5cm} DeMorgan's Law
+
+    $(r \land p) \lor (r \land \neg p)$ \tabto*{5cm} Double Negation \hspace*{2cm}
+
+    $r \lor (p \land \neg p)$ \tabto*{5cm} Distributive
+    
+    $r \lor F$ \tabto*{5cm} Contradiction
+    
+    $r$ \tabto*{5cm} Identity Rules
+
+    \question[9]{}
+
+    
+
+    \question[10]{}
 
 \end{document}
