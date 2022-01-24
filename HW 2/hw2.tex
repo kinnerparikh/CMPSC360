@@ -7,7 +7,8 @@
 \usepackage{amsfonts}
 \usepackage{dirtytalk}
 \usepackage{tabto}
-\usepackage{xcolor,colortbl}
+\usepackage{xcolor,colortbl, amssymb}
+
 
 \newcommand{\question}[2][]{\begin{flushleft}
         \textbf{Question #1}: \textit{#2}
@@ -48,49 +49,68 @@
 
     \question[2]{}
 
-        a) If 1 + 1 = 3 $\rightarrow$ F, then dogs can fly $\rightarrow$ F $\Rightarrow$  \hl{T}
+        a) If 1 + 1 = 3 $\rightarrow$ F, then dogs can fly $\rightarrow$ F $\Rightarrow$  T
 
-        b) If 1 + 1 = 2 $\rightarrow$ T, then dogs can fly $\rightarrow$ F $\Rightarrow$  \hl{F}
+        b) If 1 + 1 = 2 $\rightarrow$ T, then dogs can fly $\rightarrow$ F $\Rightarrow$  F
 
-        c) If 2 + 2 = 4 $\rightarrow$ T, then 1 + 2 = 3 $\rightarrow$ T $\Rightarrow$  \hl{T}
+        c) If 2 + 2 = 4 $\rightarrow$ T, then 1 + 2 = 3 $\rightarrow$ T $\Rightarrow$ T
 
     \question[3]{}
 
-    1. a 
+        1. p = the sun is shining, q = I will play tennis this afternoon $\therefore$ \hl{$p \rightarrow q$}
+
+        2. p = finishing the writing of my computer program before lunch, q = tennis playing this \tabto{0.96cm} afternoon $\Rightarrow$ \hl{$p \rightarrow q$}
+
+        3. p = low humidity, q = sunshine, r = I will play tennis this afternoon $\Rightarrow$ \hl{($p \land q) \rightarrow r$}
     
     \question[4]{}
 
-    \question[5]{}
+        a) The election is not decided or the votes have been counted
 
-    %\captionof{table}{$\neg$ (p $\rightarrow$ q) $\equiv$ p $\land \neg$q}
-    \begin{table}[h!]
-        \centering
-        \caption{$\neg$ (p $\rightarrow$ q) $\equiv$ p $\land \neg$q}
-        \begin{tabular}{c | c | c | >{\columncolor{Green}}c |>{\columncolor{Green}} c}
-            p & q & p $\rightarrow$ q & $\neg$ (p $\rightarrow$ q) & p $\land \neg$q \\
-            \hline
-            T & T & T & F & F \\
-            T & F & F & T & T \\
-            F & T & T & F & F \\
-            F & F & T & F & F
-        \end{tabular}
-    \end{table}
+        b) If the votes have not been counted then the election is not decided
 
-    \begin{table}[h!]
-        \centering
-        \caption{p $\lor\ \neg$(p $\land$ q) $\equiv$ T}
-        \begin{tabular}{c | c | c | c | >{\columncolor{Green}}c}
-            p & q & p $\land$ q & $\neg$(p $\land$ q) & p $\lor\ \neg$(p $\land$ q)\\
-            \hline
-            T & T & T & F & T \\
-            T & F & F & T & T \\
-            F & T & F & T & T \\
-            F & F & F & T & T
-        \end{tabular}
-    \end{table}
+        c) The election is not decided or the election is not decided and the votes have been counted
+
     \newpage
 
+    \question[5]{}
+
+        %\captionof{table}{$\neg$ (p $\rightarrow$ q) $\equiv$ p $\land \neg$q}
+        \begin{table}[h]
+            \centering
+            \caption{$\neg (p \rightarrow q) \equiv p \land \neg q$}
+            \begin{tabular}{c | c | c | >{\columncolor{Green}}c |>{\columncolor{Green}} c}
+                $p$ & $q$ & $p \rightarrow q$ & $\neg (p \rightarrow q)$ & $p \land \neg q$ \\
+                \hline
+                T & T & T & F & F \\
+                T & F & F & T & T \\
+                F & T & T & F & F \\
+                F & F & T & F & F
+            \end{tabular}
+        \end{table}
+
+        \begin{table}[h]
+            \centering
+            \caption{$p \lor \neg(p \land q) \equiv$ T}
+            \begin{tabular}{c | c | c | c | >{\columncolor{Green}}c}
+                $p$ & $q$ & $p \land q$ & $\neg(p \land q)$ & $p \lor \neg(p \land q)$)\\
+                \hline
+                T & T & T & F & T \\
+                T & F & F & T & T \\
+                F & T & F & T & T \\
+                F & F & F & T & T
+            \end{tabular}
+        \end{table}
+
     \question[6]{}
+
+        a) $p \leftrightarrow q$
+
+        b) $(p \land q)$
+
+        c) $(p \land q) \rightarrow r$
+
+        d) $r \leftrightarrow (q \lor p)$
 
     \question[7]{}
 
@@ -148,9 +168,9 @@
 
         $(r \land p) \lor (r \land \neg p)$ \tabto*{5cm} Double Negation \hspace*{2cm}
 
-        $r \lor (p \land \neg p)$ \tabto*{5cm} Distribution
+        $r \land (p \lor \neg p)$ \tabto*{5cm} Distribution
 
-        $r \lor F$ \tabto*{5cm} Contradiction
+        $r \land T$ \tabto*{5cm} Tautology
 
         $r$ \tabto*{5cm} Identity Rules
 

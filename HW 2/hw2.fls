@@ -292,6 +292,18 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -355,3 +367,4 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
