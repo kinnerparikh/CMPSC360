@@ -1,0 +1,60 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: \textit{#2}
+
+\end{flushleft}}
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+\definecolor{Green}{rgb}{0, 1, 0}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Quiz #1}
+            
+            CMPSC 360} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{15pt}
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[2]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+    
+    \question[1]{}
+
+    $\neg r \lor (p \land q)$
+
+    $(\neg r \lor p) \land (\neg r \lor q)$ Distributive Rules
+
+    $(r \rightarrow p) \land (r \rightarrow q)$ Conditional Equivalence
+
+    \begin{table}[h]
+        \centering
+        \caption{$\neg r \lor (p \land q) \equiv (r \rightarrow p) \land (r \rightarrow q)$ }
+        \begin{tabular}{c | c | c | c | c | c | c |>{\columncolor{Green}} c |>{\columncolor{Green}} c}
+            $p$ & $q$ & $r$ & $ \neg r$ & $p \land q$ & $r \rightarrow q$ & $r \rightarrow p$ & $\neg r \lor (p \land q)$ & $(r \rightarrow p) \land (r \rightarrow q)$\\
+            \hline
+            T & T & T & F & T & T & T & T & T \\
+            T & T & F & T & T & T & T & T & T \\
+            T & F & T & F & F & F & T & F & F \\
+            F & T & T & F & F & T & F & F & F \\
+            T & F & F & T & F & T & T & T & T \\
+            F & T & F & T & F & T & T & T & T \\
+            F & F & T & F & F & F & F & F & F \\
+            F & F & F & T & F & T & T & T & T \\ 
+            
+        \end{tabular}
+    \end{table}
+    
+\end{document}

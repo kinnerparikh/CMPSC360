@@ -1,0 +1,89 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 360} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{15pt}
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[3]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+    
+    \question[1]{}
+
+    $\exists x \in \mathbb{Z}(x ^ 2 = 5)$ is false because $x = \pm \sqrt{5}$ which is not an integer
+
+    \question[2]{}
+
+    1. The sum of two negative integers is always negative $\equiv \forall x \forall y((x < 0) \land (y > 0) \rightarrow (x + y < 0 ))$ \tabto{0.98cm} is \hl{false}
+
+    \hspace{0cm}
+
+    2. Which of the two statements are equal? \hl{(C and D)}
+
+    \tabto{0.98cm}a) $\neg \exists x(A(x)) \equiv \forall x(\neg A(x))$
+
+    \tabto{0.98cm}b) $\neg \forall x(\neg A(x)) \equiv \exists x(A(x))$
+
+    \tabto{0.98cm}c) $\neg \forall x(A(x)) \equiv \exists x(\neg A(x))$
+
+    \tabto{0.98cm}d) $\exists x(\neg A(x))$
+
+    \hspace{0cm}
+
+    3. $\neg (P(x) \lor Q(x)) \equiv \neg P(x) \lor \neg Q(x)$ is \hl{false}
+
+    \tabto{0.98cm} $\neg P(x) \land \neg Q(x)$
+
+    \hspace{0cm}
+
+    4. $\neg (P \rightarrow Q) \equiv P \land \neg Q$ is \hl{true}
+    \tabto{0.98cm} $\neg (\neg P \lor Q)$
+    \tabto{0.98cm} $P \land \neg Q$
+
+    \question[3]{}
+
+    Let $P(x, y, z) = x^2 + y^2 \ge z^2$
+
+    A) $\forall x \in (-3, 3) P(x, 4, 5) \Rightarrow$ \hl{True} because $3^2 + 4^2 = 5^2$
+
+    B) $\forall w \neg P(w, w, w) \Rightarrow$ False because $1^2 + 1^2 \geq 1^2$
+
+    C) $\exists s (P(6, s, 10) \land P(s, 15, 17)) \Rightarrow$ \hl{True} because $s = 100$, $6^2 + 100^2 \ge 10^2$ and $100^2 + 15^2 \ge 17^2$
+
+    D) $\forall t (P(6, t, 10) \lor P(t, 15, 17)) \Rightarrow$ False because $s = 1$, $6^2 + 1^2 \ngeq 10^2$ and $1^2 + 15^2 \ngeq 17^2$
+
+    E) $\forall \alpha (\neg P(\alpha, 1 - \alpha, 2 \alpha) \lor P(\alpha, 1-\alpha, 2\alpha)) \Rightarrow$ \hl{True} because tautology identity
+
+    \question[4]{}
+
+    
+    
+\end{document}

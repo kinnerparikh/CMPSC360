@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1643168774 "/Users/kinner/Documents/School/CMPSC360/HW 2/hw2.tex" "/Users/kinner/Documents/School/CMPSC360/HW 2/hw2.pdf" "hw2" 1643168776
-  "/Users/kinner/Documents/School/CMPSC360/HW 2/hw2.aux" 1643168775 317 fc193bd65e5f85a0e4e4ec94728b3cdb ""
-  "/Users/kinner/Documents/School/CMPSC360/HW 2/hw2.tex" 1643168774 8450 a6a3595be68f41812c8bba6a71b38842 ""
+["pdflatex"] 1643301742 "/Users/kinner/Documents/School/CMPSC360/Class Quiz 2/quiz2.tex" "/Users/kinner/Documents/School/CMPSC360/Class Quiz 2/quiz2.pdf" "quiz2" 1643301742
+  "/Users/kinner/Documents/School/CMPSC360/Class Quiz 2/quiz2.aux" 1643301742 209 c57a82d21ad1a7973bba27ed95cda1be ""
+  "/Users/kinner/Documents/School/CMPSC360/Class Quiz 2/quiz2.tex" 1643301742 2291 c843ab9f9b2c091680e313392af04e1b ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -61,11 +61,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "hw2.aux" 1643168775 317 fc193bd65e5f85a0e4e4ec94728b3cdb "pdflatex"
-  "hw2.tex" 1643168774 8450 a6a3595be68f41812c8bba6a71b38842 ""
+  "quiz2.aux" 1643301742 209 c57a82d21ad1a7973bba27ed95cda1be "pdflatex"
+  "quiz2.tex" 1643301742 2291 c843ab9f9b2c091680e313392af04e1b ""
   (generated)
-  "hw2.aux"
-  "/Users/kinner/Documents/School/CMPSC360/HW 2/hw2.pdf"
-  "/Users/kinner/Documents/School/CMPSC360/HW 2/hw2.log"
-  "hw2.pdf"
-  "hw2.log"
+  "/Users/kinner/Documents/School/CMPSC360/Class Quiz 2/quiz2.pdf"
+  "quiz2.log"
+  "quiz2.pdf"
+  "quiz2.aux"
+  "/Users/kinner/Documents/School/CMPSC360/Class Quiz 2/quiz2.log"
