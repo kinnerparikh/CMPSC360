@@ -84,6 +84,48 @@
 
     \question[4]{}
 
+    $\neg \forall x (\neg A(x) \land B(x))$
+
+    $\exists x \neg(\neg A(x) \land B(x))$ DeMorgan's Law on Universal Quantifier
+
+    $\exists x (\neg \neg A(x) \lor \neg B(x))$ DeMorgan's Law
+
+    $\exists x (A(x) \lor \neg B(x))$ Double Negation
+
+    $\exists x (B(x) \rightarrow A(x))$ Conditional Equivalence
+
+    \newpage
+
+    \question[5]{}
+
+    Let $P(f, X) = \forall \varepsilon > 0 \exists \delta > 0 \forall x, y \in X |x - y| < \delta \rightarrow |f(x) - f(y)| < \varepsilon$
+
+    so $\neg P = (\neg \forall \varepsilon > 0) (\neg \exists \delta > 0) (\neg \forall x, y \in X |x - y| < \delta \rightarrow |f(x) - f(y)| < \varepsilon)$
+
+    $(\exists \neg (\varepsilon > 0)) (\forall \neg (\delta > 0)) (\exists x, y \notin X \neg (|x - y| < \delta \rightarrow |f(x) - f(y)| < \varepsilon))$ DeMorgan's Law
+
+    $(\exists \neg (\varepsilon > 0)) (\forall \neg (\delta > 0)) (\exists x, y \notin X \neg ((|x - y| < \delta) \lor \neg(|f(x) - f(y)| < \varepsilon)))$ Conditional Equivalence
     
+    $(\exists (\varepsilon \leq 0)) (\forall  (\delta \leq 0)) (\exists x, y \notin X  (\neg (|x - y| < \delta) \land \neg \neg(|f(x) - f(y)| < \varepsilon)))$ DeMorgan's Law
+
+    $(\exists (\varepsilon \leq 0)) (\forall  (\delta \leq 0)) (\exists x, y \notin X  (\neg (|x - y| < \delta) \land (|f(x) - f(y)| < \varepsilon)))$ Double Negation
+
+    $\exists (\varepsilon \leq 0) \forall (\delta \leq 0) \exists x, y \notin X  ((|x - y| \geq \delta) \land (|f(x) - f(y)| \geq \varepsilon))$ DeMorgan's Law
+
+    \question[6]{}
+
+    Domain is $\mathbb{R}$ and $P(x, y) = x * y = 1$
+
+    \hspace{0cm}
+
+    a) $\exists x \exists y(P(x, y)) \Rightarrow$ True
+
+    b) $\exists x \forall y(P(x, y)) \Rightarrow$ False
+
+    c) $\forall x \forall y(P(x, y)) \Rightarrow$ False
+
+    d) $\forall x \exists y(P(x, y)) \Rightarrow$ True
+
     
+
 \end{document}
