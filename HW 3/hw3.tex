@@ -8,6 +8,7 @@
 \usepackage{dirtytalk}
 \usepackage{tabto}
 \usepackage{xcolor,colortbl, amssymb}
+\usepackage{comment}
 
 
 \newcommand{\question}[2][]{\begin{flushleft}
@@ -16,7 +17,7 @@
 \end{flushleft}}
 
 \definecolor{Green}{rgb}{0, 1, 0}
-\definecolor{Pink}{rgb}{1, .753, .796}
+\definecolor{Red}{rgb}{1, 0, 0}
 
 \newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
 %\newcommand\tab[1][0.4cm]{\hspace*{#1}}
@@ -72,7 +73,7 @@
 
     Let $P(x, y, z) = x^2 + y^2 \ge z^2$
 
-    A) $\forall x \in (-3, 3) P(x, 4, 5) \Rightarrow$ \hl{True} because $3^2 + 4^2 = 5^2$
+    A) $\forall x \in (-3, 3) P(x, 4, 5) \Rightarrow$ False because $1^2 + 4^2 < 5^2$
 
     B) $\forall w \neg P(w, w, w) \Rightarrow$ False because $1^2 + 1^2 \geq 1^2$
 
@@ -86,13 +87,13 @@
 
     $\neg \forall x (\neg A(x) \land B(x))$
 
-    $\exists x \neg(\neg A(x) \land B(x))$ DeMorgan's Law on Universal Quantifier
+    $\exists x \neg(\neg A(x) \land B(x))$ \tabto*{5cm} DeMorgan's Law on Universal Quantifier
 
-    $\exists x (\neg \neg A(x) \lor \neg B(x))$ DeMorgan's Law
+    $\exists x (\neg \neg A(x) \lor \neg B(x))$ \tabto*{5cm} DeMorgan's Law
 
-    $\exists x (A(x) \lor \neg B(x))$ Double Negation
+    $\exists x (A(x) \lor \neg B(x))$ \tabto*{5cm} Double Negation
 
-    $\exists x (B(x) \rightarrow A(x))$ Conditional Equivalence
+    $\exists x (B(x) \rightarrow A(x))$ \tabto*{5cm} Conditional Equivalence
 
     \newpage
 
@@ -100,17 +101,22 @@
 
     Let $P(f, X) = \forall \varepsilon > 0 \exists \delta > 0 \forall x, y \in X |x - y| < \delta \rightarrow |f(x) - f(y)| < \varepsilon$
 
-    so $\neg P = (\neg \forall \varepsilon > 0) (\neg \exists \delta > 0) (\neg \forall x, y \in X |x - y| < \delta \rightarrow |f(x) - f(y)| < \varepsilon)$
+    so $\neg P = \neg (\forall \varepsilon > 0) (\exists \delta > 0) (\forall x, y \in X |x - y| < \delta \rightarrow |f(x) - f(y)| < \varepsilon)$
 
-    $(\exists \neg (\varepsilon > 0)) (\forall \neg (\delta > 0)) (\exists x, y \notin X \neg (|x - y| < \delta \rightarrow |f(x) - f(y)| < \varepsilon))$ DeMorgan's Law
-
-    $(\exists \neg (\varepsilon > 0)) (\forall \neg (\delta > 0)) (\exists x, y \notin X \neg ((|x - y| < \delta) \lor \neg(|f(x) - f(y)| < \varepsilon)))$ Conditional Equivalence
+    $\exists \varepsilon > 0\ (\neg \exists \delta > 0) (\forall x, y \in X |x - y| < \delta \rightarrow |f(x) - f(y)| < \varepsilon)$ \tabto*{11cm} DeMorgan's Law
     
-    $(\exists (\varepsilon \leq 0)) (\forall  (\delta \leq 0)) (\exists x, y \notin X  (\neg (|x - y| < \delta) \land \neg \neg(|f(x) - f(y)| < \varepsilon)))$ DeMorgan's Law
+    $\exists \varepsilon > 0\ \forall \delta > 0\ (\neg \forall x, y \in X |x - y| < \delta \rightarrow |f(x) - f(y)| < \varepsilon)$ \tabto*{11cm} DeMorgan's Law
+    
+    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ \neg [(|x - y| < \delta) \rightarrow (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} DeMorgan's Law
+    
+    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ \neg [(|x - y| < \delta) \lor \neg (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} Conditional Equivalence
+    
+    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ [\neg (|x - y| < \delta) \land \neg \neg (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} DeMorgan's Law
 
-    $(\exists (\varepsilon \leq 0)) (\forall  (\delta \leq 0)) (\exists x, y \notin X  (\neg (|x - y| < \delta) \land (|f(x) - f(y)| < \varepsilon)))$ Double Negation
+    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ [\neg (|x - y| < \delta) \land (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} Double Negation
 
-    $\exists (\varepsilon \leq 0) \forall (\delta \leq 0) \exists x, y \notin X  ((|x - y| \geq \delta) \land (|f(x) - f(y)| \geq \varepsilon))$ DeMorgan's Law
+    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ [(|x - y| \geq \delta) \land (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} DeMorgan's Law
+
 
     \question[6]{}
 
@@ -118,62 +124,111 @@
 
     \hspace{0cm}
 
-    a) $\exists x \exists y(P(x, y)) \Rightarrow$ True
+    a) $\exists x \exists y\ [P(x, y)] \Rightarrow$ True
 
-    b) $\exists x \forall y(P(x, y)) \Rightarrow$ False
+    b) $\exists x \forall y\ [P(x, y)] \Rightarrow$ False
 
-    c) $\forall x \forall y(P(x, y)) \Rightarrow$ False
+    c) $\forall x \forall y\ [P(x, y)] \Rightarrow$ False
 
-    d) $\forall x \exists y(P(x, y)) \Rightarrow$ True
+    d) $\forall x \exists y\ [P(x, y)] \Rightarrow$ True
     
     \question[7]{}
     
     a) $\forall x < 0\ \forall y > 0\ (x * y < 0)$
 
-    b) $\forall x \in \mathbb{Z} (x$ is even $\lor\ x$ is odd$)$
+    b) $\forall x \in \mathbb{Z}\ (x$ is even $\lor\ x$ is odd$)$
 
-    c) $\forall x (P(x) \land R(x)) \rightarrow Q(x)$
+    c) $\forall x\ [P(x) \land R(x)] \rightarrow Q(x)$
 
-    d) $\neg \forall x A(x) \rightarrow (B(x) \lor C(x))$
+    d) $\neg \forall x\ A(x) \rightarrow [B(x) \lor C(x)]$
 
     \question[8]{}
 
     a) Some animals in the world do not live in a forest
 
-    b) For all real numbers $x$, there is some real number $y$ that satisfies the condition $y^3 = x$
+    b) For all real numbers $x$, there is some real number $y$ such that $y^3 = x$
 
     c) For all integers $x$ and $y$, the product of $x$ and $y$ will be an integer.
 
-    d) For all real numbers $x$, $x-x=0$
+    d) For all real numbers $x$, the difference of $x$ and $x$ is 0. 
 
     \question[9]{}
 
-    a) For all $y$, there is some $x$ for which $x$ is less than $y$. | True 
+    a) For all integer $y$, there is some integer $x$ such that $x$ is less than $y$. | True 
 
-    b) For all $x$ greater than 0, there is some prime number $y$ which is greater than $x$. | True
+    b) For all integer $x$ and some integer $y$, such that if $x$ is positive, then $y$ is a prime number and \tabto{0.98cm}$x$ is less than $y$ | True
 
-    c) For all $x$ and some $y$, x will be less than $y$ and $y$ will be prime. | True
+    c) For all integer $x$, there is some integer $y$ such that $x$ will be less than $y$ and $y$ will be prime. \tabto{0.98cm}| True
 
     \newpage
 
     \question[10]{}
+    
+    \centering
 
-    \phantom{`}$p \lor q$
+    \phantom{`}$p \lor q$ 
 
-    \underline{$(p \land r) \rightarrow q$}
+    \underline{$(p \land r) \rightarrow q$} %\tabto*{4cm} $\equiv$ \tabto*{5.6cm} $(p \lor q) \land [(p \land r) \rightarrow q] \rightarrow r$
 
-    \phantom{`}$r$
+    $\therefore r$
 
-    \hspace{0cm}
+    \begin{table}[h]
+        \centering
+        
+        \begin{tabular}{c | c | c | c | c | c | c |>{\columncolor{Green}} c}
+            $p$ & $q$ & $r$ & $p \lor q$ & $p \land r$ & $(p \land r) \rightarrow q$ & $(p \lor q) \land [(p \land r) \rightarrow q]$ & $(p \lor q) \land [(p \land r) \rightarrow q] \rightarrow r$ \\
+            \hline
+            F & F & F & F & F & T & F & T \\
+            F & F & T & F & F & T & F & {\cellcolor{Red}}F \\
+            F & T & F & T & F & F & F & T \\
+            F & T & T & T & F & F & F & {\cellcolor{Red}}F \\
+            T & F & F & T & F & T & T & T \\
+            T & F & T & T & T & T & T & T \\
+            T & T & F & T & F & F & F & T \\
+            T & T & T & T & T & T & T & T \\
+        \end{tabular}
+    \end{table}
 
-    $(p \land r) \rightarrow q$
+    This is not a valid argument because it is not a tautology. We can prove this using the truth table. The lines with the red highlights show the truth values where the argument is not valid.
 
-    $(p \land r) \lor \neg q$
+    % \hspace{0cm}
+    % 
+    % $(p \land r) \rightarrow q$
+    % 
+    % $(p \land r) \lor \neg q$
+    % 
+    % $(p \lor \neg q) \land (r \land \neg q)$
+    % 
+    % \hspace{0cm}
+    % 
+    % $(p \lor q) \land (p \lor \neg q) \land (r \lor \neg q)$
 
-    $(p \lor \neg q) \land (r \land \neg q)$
-
-    \hspace{0cm}
-
-    $(p \lor q) \land (p \lor \neg q) \land (r \lor \neg q)$
-
+    % \question[11]{}
+    % 
+    % \begin{table}[h]
+    %     \centering
+    %     
+    %     \begin{tabular}{c | c | c | c |>{\columncolor{Green}} c}
+    %         $A$ & $B$ & $C$ & $D$ & $\overline{A}(BC + D)$ \\
+    %         \hline
+    %         False  &  False  &  False  &   False  &   False \\
+    %         False  &  False  &  False  &   True   &   True  \\
+    %         False  &  False  &  True   &   False  &   False \\
+    %         False  &  False  &  True   &   True   &   True  \\
+    %         False  &  True   &  False  &   False  &   False \\
+    %         False  &  True   &  False  &   True   &   True  \\
+    %         False  &  True   &  True   &   False  &   True  \\
+    %         False  &  True   &  True   &   True   &   True  \\
+    %         True   &  False  &  False  &   False  &   False \\
+    %         True   &  False  &  False  &   True   &   False \\
+    %         True   &  False  &  True   &   False  &   False \\
+    %         True   &  False  &  True   &   True   &   False \\
+    %         True   &  True   &  False  &   False  &   False \\
+    %         True   &  True   &  False  &   True   &   False \\
+    %         True   &  True   &  True   &   False  &   False \\
+    %         True   &  True   &  True   &   True   &   False 
+    %         
+    %     \end{tabular}
+    % \end{table}
+    
 \end{document}
