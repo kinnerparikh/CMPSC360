@@ -109,13 +109,13 @@
     
     $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ \neg [(|x - y| < \delta) \rightarrow (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} DeMorgan's Law
     
-    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ \neg [(|x - y| < \delta) \lor \neg (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} Conditional Equivalence
+    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ \neg [\neg (|x - y| < \delta) \lor (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} Conditional Equivalence
     
-    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ [\neg (|x - y| < \delta) \land \neg \neg (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} DeMorgan's Law
+    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ [\neg \neg (|x - y| < \delta) \land  \neg (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} DeMorgan's Law
 
-    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ [\neg (|x - y| < \delta) \land (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} Double Negation
+    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ [ (|x - y| < \delta) \land \neg (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} Double Negation
 
-    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ [(|x - y| \geq \delta) \land (|f(x) - f(y)| < \varepsilon)]$ \tabto*{11cm} DeMorgan's Law
+    $\exists \varepsilon > 0\ \forall \delta > 0\ \exists x, y \in X\ [(|x - y| < \delta) \land (|f(x) - f(y)| \geq \varepsilon)]$ \tabto*{11cm} DeMorgan's Law
 
 
     \question[6]{}
@@ -134,9 +134,11 @@
     
     \question[7]{}
     
-    a) $\forall x < 0\ \forall y > 0\ (x * y < 0)$
+    a) $\forall x \in \mathbb{Z},x < 0\ \forall y \in \mathbb{Z},y > 0\ (x * y < 0)$
 
-    b) $\forall x \in \mathbb{Z}\ (x$ is even $\lor\ x$ is odd$)$
+    b) $E(x)$ = $x$ is even, $O(x)$ = $x$ is odd
+    
+    \tabto*{0.98cm}$\forall x \in \mathbb{Z}\ (E(x) \lor O(x))$
 
     c) $\forall x\ [P(x) \land R(x)] \rightarrow Q(x)$
 
@@ -178,13 +180,22 @@
         \begin{tabular}{c | c | c | c | c | c | c |>{\columncolor{Green}} c}
             $p$ & $q$ & $r$ & $p \lor q$ & $p \land r$ & $(p \land r) \rightarrow q$ & $(p \lor q) \land [(p \land r) \rightarrow q]$ & $(p \lor q) \land [(p \land r) \rightarrow q] \rightarrow r$ \\
             \hline
+            % F & F & F & F & F & T & F & T \\
+            % F & F & T & F & F & T & F & {\cellcolor{Red}}F \\
+            % F & T & F & T & F & F & F & T \\
+            % F & T & T & T & F & F & F & {\cellcolor{Red}}F \\
+            % T & F & F & T & F & T & T & T \\
+            % T & F & T & T & T & T & T & T \\
+            % T & T & F & T & F & F & F & T \\
+            % T & T & T & T & T & T & T & T \\
+
             F & F & F & F & F & T & F & T \\
-            F & F & T & F & F & T & F & {\cellcolor{Red}}F \\
-            F & T & F & T & F & F & F & T \\
-            F & T & T & T & F & F & F & {\cellcolor{Red}}F \\
-            T & F & F & T & F & T & T & T \\
-            T & F & T & T & T & T & T & T \\
-            T & T & F & T & F & F & F & T \\
+            F & F & T & F & F & T & F & T \\
+            F & T & F & T & F & T & T & {\cellcolor{Red}}F \\
+            F & T & T & T & F & T & T & T \\
+            T & F & F & T & F & T & T & {\cellcolor{Red}}F \\
+            T & F & T & T & T & F & F & T \\
+            T & T & F & T & F & T & T & {\cellcolor{Red}}F \\
             T & T & T & T & T & T & T & T \\
         \end{tabular}
     \end{table}
