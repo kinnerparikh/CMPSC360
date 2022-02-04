@@ -1,0 +1,121 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Quiz #1}
+            
+            CMPSC 360} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{15pt}
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[3]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+    
+    \question[1]{}
+
+    $\forall x (P(x) \land Q(x)) \rightarrow R(x)$
+
+    \question[2]{}
+
+    $\neg \forall x \exists y (P(x, y) \rightarrow Q(x, y)) \equiv \exists x \forall y (\neg P(x, y) \lor Q(x, y))$
+
+    $ \exists x \neg \exists y (P(x, y) \rightarrow Q(x, y))$
+
+    $ \exists x\forall y \neg(P(x, y) \rightarrow Q(x, y))$
+
+    $ \exists x\forall y \neg(\neg P(x, y) \lor Q(x, y))$
+
+    $ \exists x\forall y (\neg \neg P(x, y) \land \neg Q(x, y))$
+
+    $ \exists x\forall y (P(x, y) \land \neg Q(x, y))$
+
+    The statement is false
+
+    \question[3]{}
+
+    Domain: $\mathbb{R}$, $P(x, y)$ is $x^2 = 2y$
+
+    $\exists x \forall y P(x, y)$ is false because there is no case where all of $y$ works
+
+    \question[4]{}
+
+    $p \rightarrow q$
+    
+    \underline{$p \land q$}
+
+    $\therefore \neg q$
+
+
+
+    This is not valid.   $((p \rightarrow q) \land (p \land q)) \rightarrow \neg q$
+
+    When $p$ is true and $q$
+
+
+    \question[5]{}
+
+    1. $p =$ I eat spicy food today, $q =$ My stomach will give me trouble
+
+    \hspace*{0cm}
+
+    \tabto*{0.98cm}$p \rightarrow q$
+
+    \tabto*{0.98cm}\underline{\phantom{...}$\neg q$ \phantom{d}}
+
+    \tabto*{0.98cm} \phantom{} $\therefore \neg p$
+
+    \tabto*{0.98cm}This statement uses the modus tollens inference rule.
+
+    \tabto*{0.98cm}\hspace*{0cm}
+
+    2. $p =$ Penn State will hold a graduation ceremony this Fall
+    
+    \tabto*{0.98cm}$q =$ all ceremonies will be canceled due to Covid-19
+
+    \hspace*{0cm}
+
+    \tabto*{0.98cm}\underline{\phantom{sf.} $p$ \phantom{d.;}}
+
+    \tabto*{0.98cm}$\therefore p \lor q$
+
+    \tabto*{0.98cm}This statement uses the additive inference rule.
+    
+    \tabto*{0.98cm}\hspace*{0cm}
+
+    3. $p =$ I am a front end developer, $q =$ I am good at CSS
+
+    \hspace*{0cm}
+
+
+    \tabto*{0.98cm}\underline{$p \land q$}
+
+    \tabto*{0.98cm}$\therefore p$
+
+    \tabto*{0.98cm}This statement uses the simplification rule.
+    
+\end{document}
