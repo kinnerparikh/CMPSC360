@@ -8,6 +8,7 @@
 \usepackage{dirtytalk}
 \usepackage{tabto}
 \usepackage{xcolor,colortbl, amssymb}
+\usepackage{comment}
 
 
 \newcommand{\question}[2][]{\begin{flushleft}
@@ -37,5 +38,104 @@
     %Keep a blank space between maketitletwo and \question[1]
     
     \question[1]{}
+    
+    NEWS\_KIT = I was reading the newspaper in the kitchen \tabto*{11cm} H1: NEWS\_KIT $\rightarrow$ GLASS\_KIT
+    
+    GLASS\_KIT = My glasses are on the kitchen table \tabto*{11cm} H2: GLASS\_KIT $\rightarrow$ GLASS\_BREAK
+    
+    GLASS\_BREAK = I saw my glasses at breakfast \tabto*{11cm} H3: $\neg$ GLASS\_BREAK
+
+    NEWS\_LIV = I was reading the newspaper in the living room \tabto*{11cm} H4: NEWS\_LIV $\lor$ NEWS\_KIT
+    
+    GLASS\_COFF = My glasses are on the coffee table \tabto*{11cm} H5: NEWS\_LIV $\rightarrow$ GLASS\_COFF
+    
+    \hspace*{0cm}
+
+    1. GLASS\_KIT $\rightarrow$ GLASS\_BREAK \tabto*{7cm}H2
+
+    2. $\neg$GLASS\_BREAK \tabto*{7cm}H3
+
+    3. $\neg$GLASS\_KIT \tabto*{7cm}Modus Tollens on 1 and 2
+
+    4. NEWS\_KIT $\rightarrow$ GLASS\_KIT \tabto*{7cm}H1
+
+    5. $\neg$NEWS\_KIT \tabto*{7cm}Modus Tollens on 4 and 3
+
+    6. NEWS\_LIV $\lor$ NEWS\_KIT \tabto*{7cm}H4
+
+    7. NEWS\_LIV \tabto*{7cm}Disjunctive Syllogism on 6 and 5
+
+    8. NEWS\_LIV $\rightarrow$ GLASS\_COFF \tabto*{7cm}H5
+
+    9. GLASS\_COFF \tabto*{7cm}Modus Ponens on 8 and 7
+
+
+    \hspace*{0cm}
+
+    Therefore, the glasses are at on the coffee table.
+
+    \question[2]{}
+
+    H1: ($\neg$v $\lor$ $\neg$p) $\rightarrow$ (s $\land$ z)
+    
+    H2: s $\rightarrow$ o
+    
+    H3: $\neg$o
+    
+    C: v
+
+    \hspace*{0cm}
+
+    1. s $\rightarrow$ o \tabto*{5cm}H2
+
+    2. $\neg$o \tabto*{5cm}H3
+
+    3. $\neg$s \tabto*{5cm}Modus Tollens on 1 and 2
+
+    4. ($\neg$v $\lor$ $\neg$p) $\rightarrow$ (s $\land$ z) \tabto*{5cm}H1
+    
+    5. $\neg$v $\rightarrow$ (s $\land$ z) \tabto*{5cm}Additive rule on 4
+
+    6. $\neg$v $\rightarrow$ s \tabto*{5cm}Simplification of 5
+
+    7. $\neg \neg$v \tabto*{5cm}Modus Tollens of 6 and 3
+
+    8. v \tabto*{5cm}Double negation on 7
+
+    \question[3]{}
+
+    1. This is not a valid argument (a$^2$ is positive, but a could be $\pm$a)
+    
+    2. This is a valid argument (the only solution for $\sqrt{0^2}$ is 0)
+
+    \question[4]{}
+
+    P($x$) = if $x$ has taken CMPSC-360, then they can take CMPSC-465 next semester
+
+    \hspace*{0cm}
+
+    \underline{$\forall x$P($x$) \phantom{aaaaaa}}
+
+    $\therefore$P($c$) if $c \in $ U
+
+    \hspace*{0cm}
+
+    The argument is valid because of universal instantiation.
+
+    \question[5]{}
+
+    For all natural numbers $n$, $\frac{n}{3} + \frac{n^2}{2} + \frac{n^3}{6}$ is a natural number
+
+    \hspace*{0cm}
+
+    Proof:
+
+    Suppose $n$, and we know that $n \in \mathbb{N}$
+
+    By definition of multiplies, 
+
+    \question[8]{}
+
+    
     
 \end{document}
