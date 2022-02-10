@@ -371,6 +371,10 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 OUTPUT /Users/kinner/Documents/School/CMPSC360/HW 4/hw4.pdf
 INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /Users/kinner/Documents/School/CMPSC360/HW 4/hw4.aux
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

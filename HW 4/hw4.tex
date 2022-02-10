@@ -133,9 +133,23 @@
 
     \question[3]{}
 
-    1. This is not a valid argument (a$^2$ is positive, but a could be $\pm$a)
+    1. This is not a valid argument 
     
-    2. This is a valid argument (the only solution for $\sqrt{0^2}$ is 0)
+    \tabto*{0.96cm}Ex. a$^2$ is positive, but a could be either $\pm$a
+
+    \tabto*{0.96cm}Therefore, this is not a valid argument by counter example
+
+    \hspace*{0.2cm}
+    
+    2. P(x) = if x$^2 \neq$ 0, then x $\neq$ 0 
+
+    \tabto*{0.96cm}Domain: x $\in \mathbb{Z}$, x $>$ 0
+
+    \tabto*{0.96cm}\underline{$\forall$x P(x) \phantom{aaaaaaaaaaaaaaaaaa}}
+
+    \tabto*{0.96cm}$\therefore$P(a) such that a $\in$ Domain
+
+    \tabto*{0.96cm}Therefore, this statement is true through universal instantiation
 
     %   ____                         _     _                     _  _   
     %  / __ \                       | |   (_)                   | || |  
@@ -152,6 +166,8 @@
 
     U = all students
 
+    R = \{Miranda, Tom, Shilpa, Mark, and Desiree\} where R $\in$ U
+
     \vspace*{0.2cm}
 
     $\forall x$ TAKEN($x$)
@@ -167,12 +183,16 @@
 
     \underline{TAKEN($c$) $\rightarrow$ CANTAKE($c$)}
 
-    $\therefore$ CANTAKE($c$) by Modus Pollens
+    $\therefore$ CANTAKE($c$) by Modus Ponens
 
     \vspace*{0.2cm}
-    so by universal generalization, we can conclude that someone who has taken CMPSC-360, can \tabto{0.5cm} 
-    take CMPSC-465. Therefore, since all five roommates have taken CMPSC-360, they can all \tabto{0.5cm}
-    take CMPSC-465
+    Therefore by universal generalization,
+
+    $\forall x \in $ R TAKEN($x$)
+
+    \underline{$\forall x \in$ R TAKEN($x$) $\rightarrow$ CANTAKE($x$)}
+
+    $\therefore \forall x \in$ R CANTAKE($x$)
 
 
 
