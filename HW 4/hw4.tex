@@ -37,6 +37,15 @@
     \maketitletwo[4]  % Optional argument is assignment number
     %Keep a blank space between maketitletwo and \question[1]
     
+
+    %   ____                         _     _                     __ 
+    %  / __ \                       | |   (_)                   /_ |
+    % | |  | |  _   _    ___   ___  | |_   _    ___    _ __      | |
+    % | |  | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \     | |
+    % | |__| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |    | |
+    %  \___\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|    |_|
+                                                                 
+
     \question[1]{}
     
     NEWS\_KIT = I was reading the newspaper in the kitchen \tabto*{11cm} H1: NEWS\_KIT $\rightarrow$ GLASS\_KIT
@@ -74,33 +83,53 @@
 
     Therefore, the glasses are at on the coffee table.
 
+    %   ____                         _     _                     ___  
+    %  / __ \                       | |   (_)                   |__ \ 
+    % | |  | |  _   _    ___   ___  | |_   _    ___    _ __        ) |
+    % | |  | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \      / / 
+    % | |__| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |    / /_ 
+    %  \___\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |____|
+                                                                   
+
     \question[2]{}
 
-    H1: ($\neg$v $\lor$ $\neg$p) $\rightarrow$ (s $\land$ z)
+    H1: $(\neg v \lor \neg p) \rightarrow (s \land z)$
     
-    H2: s $\rightarrow$ o
+    H2: $s \rightarrow o$
     
-    H3: $\neg$o
+    H3: $\neg o$
     
-    C: v
+    C: $v$
 
     \hspace*{0cm}
 
-    1. s $\rightarrow$ o \tabto*{5cm}H2
+    1. $s \rightarrow o$ \tabto*{5cm}H2
 
-    2. $\neg$o \tabto*{5cm}H3
+    2. $\neg o$ \tabto*{5cm}H3
 
-    3. $\neg$s \tabto*{5cm}Modus Tollens on 1 and 2
+    3. $\neg s$ \tabto*{5cm}Modus Tollens on 1 and 2
 
-    4. ($\neg$v $\lor$ $\neg$p) $\rightarrow$ (s $\land$ z) \tabto*{5cm}H1
+    4. $\neg (s \land z) \rightarrow \neg (\neg v \lor \neg p)$ \tabto*{5cm}Contrapositive of H1
+
+    5. $(\neg s \lor \neg z) \rightarrow (\neg \neg v \land \neg \neg p)$ \tabto*{5cm}DeMorgan's Law
+
+    6. $(\neg s \lor \neg z) \rightarrow (v \land p)$ \tabto*{5cm}Double Negation
+
+    7. $\neg s \lor \neg z$ \tabto*{5cm}Addition on 3
+
+    8. $v \land p$ \tabto*{5cm}Modus Ponens on 6 and 7
+
+    9. $v$ \tabto*{5cm}Simplification of 8
     
-    5. $\neg$v $\rightarrow$ (s $\land$ z) \tabto*{5cm}Additive rule on 4
 
-    6. $\neg$v $\rightarrow$ s \tabto*{5cm}Simplification of 5
+    \newpage
 
-    7. $\neg \neg$v \tabto*{5cm}Modus Tollens of 6 and 3
-
-    8. v \tabto*{5cm}Double negation on 7
+    %   ____                         _     _                     ____  
+    %  / __ \                       | |   (_)                   |___ \ 
+    % | |  | |  _   _    ___   ___  | |_   _    ___    _ __       __) |
+    % | |  | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \     |__ < 
+    % | |__| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |    ___) |
+    %  \___\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |____/                                                                   
 
     \question[3]{}
 
@@ -108,28 +137,69 @@
     
     2. This is a valid argument (the only solution for $\sqrt{0^2}$ is 0)
 
+    %   ____                         _     _                     _  _   
+    %  / __ \                       | |   (_)                   | || |  
+    % | |  | |  _   _    ___   ___  | |_   _    ___    _ __     | || |_ 
+    % | |  | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    |__   _|
+    % | |__| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |      | |  
+    %  \___\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|      |_|  
+                                                                     
     \question[4]{}
 
-    P($x$) = if $x$ has taken CMPSC-360, then they can take CMPSC-465 next semester
+    TAKEN($x$) = $x$ has taken CMPSC-360
 
-    c = Miranda, Tom, Shilpa, Mark, and Desiree
+    CANTAKE($x$) = $x$ can take CMPSC-465
 
-    U = Every student who has taken CMPSC-360
+    U = all students
 
-    \hspace*{0cm}
+    \vspace*{0.2cm}
 
-    \underline{$\forall x$P($x$) \phantom{aaaaaa}}
+    $\forall x$ TAKEN($x$)
 
-    $\therefore$P($c$) if $c \in $ U
+    \underline{$\forall x$ TAKEN($x$) $\rightarrow$ CANTAKE($x$)}
 
-    \hspace*{0cm}
+    $\therefore \forall x$ CANTAKE($x$)
 
-    The argument is valid because of universal instantiation.
+    \vspace*{0.2cm}
+    Therefore, by universal instantiation
+
+    TAKEN($c$) for an arbitrary $c \in$ U
+
+    \underline{TAKEN($c$) $\rightarrow$ CANTAKE($c$)}
+
+    $\therefore$ CANTAKE($c$) by Modus Pollens
+
+    \vspace*{0.2cm}
+    so by universal generalization, we can conclude that someone who has taken CMPSC-360, can \tabto{0.5cm} 
+    take CMPSC-465. Therefore, since all five roommates have taken CMPSC-360, they can all \tabto{0.5cm}
+    take CMPSC-465
+
+
+
+    %P($x$) = if $x$ has taken CMPSC-360, then they can take CMPSC-465 next semester
+
+    %c = Miranda, Tom, Shilpa, Mark, and Desiree
+
+    %U = Every student who has taken CMPSC-360
+
+    %\hspace*{0cm}
+
+    %\underline{$\forall x$P($x$) \phantom{aaaaaa}}
+
+    %$\therefore$P($c$) if $c \in $ U
+
+    %\hspace*{0cm}
+
+    %The argument is valid because of universal instantiation.
 
     \newpage
 
-
-
+    %   ____                         _     _                     _____ 
+    %  / __ \                       | |   (_)                   | ____|
+    % | |  | |  _   _    ___   ___  | |_   _    ___    _ __     | |__  
+    % | |  | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    |___ \ 
+    % | |__| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |    ___) |
+    %  \___\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |____/ 
 
     \question[5]{}
 
@@ -177,7 +247,7 @@
 
     \vspace*{0.2cm}
     
-    \textbf{Case 2}: $n$ = $x + 1$
+    \textbf{Case 2}: $n$ = $x + 1$ where $x \in \mathbb{Z}$
     \vspace*{0.08cm}
 
     \tabto*{1cm}$n(n + 1)(n + 2)$ = $(x + 1)\cdot [(x + 1) + 1]\cdot [(x + 1) + 2]$ \tabto*{9.6cm}plugging in $x+1$ for $n$
@@ -252,8 +322,12 @@
 
     Therefore, for all natural numbers $n$, $\frac{n}{3} + \frac{n^2}{2} + \frac{n^3}{6}$ is a natural number. $\square$
 
-
-
+    %   ____                         _     _                       __  
+    %  / __ \                       | |   (_)                     / /  
+    % | |  | |  _   _    ___   ___  | |_   _    ___    _ __      / /_  
+    % | |  | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    | '_ \ 
+    % | |__| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |   | (_) |
+    %  \___\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|    \___/ 
 
     \question[6]{}
 
@@ -263,7 +337,7 @@
 
     Proof:
 
-    Suppose $n^2-1$, and n is an odd natural number
+    Suppose $n$ is an odd natural number
     
     By definition of odd, we know that $n = 2a+1$ such that $a \in \mathbb{N}$
 
@@ -299,7 +373,7 @@
 
     \tabto*{2.08cm} = $4(2x + 1)(2x + 2)$ \tabto*{6cm}addition
 
-    \tabto*{2.08cm} = $4(2x + 1)[2(x + 1)]$ \tabto*{6cm}addition
+    \tabto*{2.08cm} = $4(2x + 1)[2(x + 1)]$ \tabto*{6cm}factoring out 2
 
     \tabto*{2.08cm} = $8(2x + 1)(x + 1)$ \tabto*{6cm}multiplication
 
@@ -315,6 +389,13 @@
 
     Therefore, $n^2 -1$ is always divisible by 8 when $n$ is an odd natural number $\square$
 
+    %   ____                         _     _                     ______ 
+    %  / __ \                       | |   (_)                   |____  |
+    % | |  | |  _   _    ___   ___  | |_   _    ___    _ __         / / 
+    % | |  | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \       / /  
+    % | |__| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |     / /   
+    %  \___\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|    /_/    
+                                                                     
     \question[7]{}
 
     i) We know that $m \in \mathbb{Z}$
@@ -344,6 +425,15 @@
 
     \newpage
 
+    %   ____                         _     _                      ___  
+    %  / __ \                       | |   (_)                    / _ \ 
+    % | |  | |  _   _    ___   ___  | |_   _    ___    _ __     | (_) |
+    % | |  | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \     > _ < 
+    % | |__| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |   | (_) |
+    %  \___\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|    \___/ 
+                                                                    
+                                                                    
+
     \question[8]{}
 
     Prove that the product of any two odd integers is odd.
@@ -365,8 +455,5 @@
     Therefore, by the definition of an odd number, $a \cdot b$ is odd
 
     Therefore, the product of any two odd integers is odd. $\square$
-
-
-
     
 \end{document}

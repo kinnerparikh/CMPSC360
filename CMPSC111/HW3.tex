@@ -1,0 +1,66 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 360} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{15pt}
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[1]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+    
+    \question[1]{}
+
+    $[Y \land (\neg X  \land \neg Y)] \lor [X \land [(X \land Y) \lor (\neg X \land Y) \lor (X \land \neg Y)]]$
+
+    $[(Y \land \neg Y) \land \neg X] \lor [X \land [(X \land Y) \lor (\neg X \land Y) \lor (X \land \neg Y)]]$ Associative Rule
+
+    $[F \land \neg X] \lor [X \land [(X \land Y) \lor (\neg X \land Y) \lor (X \land \neg Y)]]$ Contradiction
+
+    $[F \land \neg X] \lor [X \land [(X \land Y) \lor [(\neg X \lor X) \land (Y \lor \neg Y)]]]$ Distributive Law
+
+    $[F \land \neg X] \lor [X \land [(X \land Y) \lor [T \land T]]]$ Tautology
+
+    $[F \land \neg X] \lor [X \land [(X \land Y) \lor T]]$ Identity
+
+    $F \lor [X \land [(X \land Y) \lor T]]$ Identity
+
+    $F \lor [X \land (X \land Y)]$ Identity
+
+    $F \lor [(X \land X) \land Y]$ Associative Rule
+
+    $F \lor [X \land Y]$ Idempotence
+
+    $X \land Y$ Identity
+
+
+
+    
+\end{document}
