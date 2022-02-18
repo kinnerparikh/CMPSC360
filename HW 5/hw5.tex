@@ -1,0 +1,422 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: #2
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 360} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{15pt}
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[5]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+
+    %   ___                         _     _                     _ 
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     / |
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    | |
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |   | |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |_|
+                                                               
+    
+    \question[1]{ We try to prove that if $n$ is an integer, then $n^3-2n^2+5n-1$ is divisible by 3}
+
+    1. n is not divisible by 3
+
+    2. 2
+
+    3. divisible by 3
+
+    4. neither true or false $\rightarrow$ even if the cases pass, there is a case where $n \% 3 == 0$
+
+    5. all cases are true
+
+
+    Proof: Assume $n \in \mathbb{Z}$
+
+    Suppose $n$ is not divisible by 3 ($3 \nmid n$)
+
+    By definition of divides, either $n = 3k + 1$ or $n = 3k +2$ where $k \in \mathbb{Z}$
+
+    \textbf{Case 1:} $n = 3k + 1$
+
+    $n^3-2n^2+5n-1$ = $(3k + 1)^3 - 2(3k + 1)^2 + 5(3k + 1) - 1$
+
+    \tabto*{3.4cm} = $27k^3 + 27k^2 + 9k + 1 - 18k^2 - 12k - 2 + 15k + 5 - 1$
+
+    \tabto*{3.4cm} = $27k^3 + 9k^2 + 12k + 3$
+
+    \tabto*{3.4cm} = $3(9k^3 + 3k^2 + 4k + 1)$
+
+    \tabto*{3.4cm} = $3t$ such that $t \in \mathbb{Z}$ where $t = 9k^3 + 3k^2 + 4k + 1$
+
+    By definition of divides, $n^3-2n^2+5n-1$ is divisible by 3
+
+    Therefore, when $n = 3k + 1$, $n^3-2n^2+5n-1$ is divisible by 3
+
+    \textbf{Case 2:} $n = 3k + 2$
+
+    $n^3-2n^2+5n-1$ = $(3k + 2)^3 - 2(3k + 2)^2 + 5(3k + 2) - 1$
+    
+    \tabto*{3.4cm} = $27k^3 + 54k^2 + 36k + 8 - 18k^2 - 24k - 8 + 15k + 10 - 1$
+
+    \tabto*{3.4cm} = $27k^3 + 36k^2 + 27k + 9$
+
+    \tabto*{3.4cm} = $3(9k^3 + 12k^2 + 9k + 3)$
+
+    \tabto*{3.4cm} = $3t$ such that $t \in \mathbb{Z}$ where $t = 9k^3 + 12k^2 + 9k + 3$
+
+    By definition of divides, $n^3-2n^2+5n-1$ is divisible by 3
+
+    Therefore, when $n = 3k + 2$, $n^3-2n^2+5n-1$ is divisible by 3
+
+    \newpage
+
+    %   ___                         _     _                     ____  
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     |___ \ 
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \      __) |
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |    / __/ 
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |_____|
+
+    \question[2]{Prove that max\{$x, y$\} + min\{$x, y$\} = $x + y$. Collaborated with Sahil Kuwadia.}
+
+    a. \textbf{Assumption:} $x$ and $y$ are real numbers $\rightarrow x,y \in \mathbb{R}$
+
+    \tabto{1cm}\textbf{Conclusion:} The sum of the larger value in $x$ or $y$ and the smaller value in $x$ and $y$ is equal
+    \tabto{1.05cm}to the sum of $x$ and $y$
+
+    \vspace*{0.3cm}
+
+    b. Proof: Suppose $x, y \in \mathbb{R}$
+
+    \tabto{1cm} We know that $x$ is either greater than $y$ or $x$ is less than or equal to $y$
+
+    \vspace*{0.1cm}
+
+    \tabto{1cm} \textbf{Case 1:} $x > y$
+
+    \tabto{1.3cm} max\{$x, y$\} = $x$, min\{$x, y$\} = $y$
+
+    \tabto{1.3cm} so, the sum of max\{$x, y$\} and min\{$x, y$\} is $x + y$
+
+    \tabto{1.3cm} therefore, max\{$x, y$\} + min\{$x, y$\} = $x + y$
+
+    \vspace*{0.1cm}
+
+    \tabto{1cm} \textbf{Case 2:} $x \leq y$
+
+    \tabto{1.3cm} max\{$x, y$\} = $y$, min\{$x, y$\} = $x$
+
+    \tabto{1.3cm} so, the sum of max\{$x, y$\} and min\{$x, y$\} is $y + x$
+
+    \tabto{1.3cm} therefore, max\{$x, y$\} + min\{$x, y$\} = $x + y$
+
+    \vspace*{0.1cm}
+
+    \tabto{1cm} The statement holds for both cases
+
+    \tabto{1cm} Therefore, max\{$x, y$\} + min\{$x, y$\} = $x + y$ for all $x, y \in \mathbb{R}$. $\square$
+
+    \vspace*{0.3cm}
+
+    c. Proof: Suppose $x, y \in \mathbb{R}$
+    
+    \vspace*{0.1cm}
+
+    \tabto{1cm} max\{$x, y$\} = $\frac{x + y + |x - y|}{2}$
+
+    \vspace*{0.1cm}
+
+    \tabto{1cm} min\{$x, y$\} = $\frac{x + y - |x - y|}{2}$
+
+    \vspace*{0.1cm}
+
+    \tabto{1cm} So, max\{$x, y$\} + min\{$x, y$\} = $\frac{x + y + |x - y|}{2}$ + $\frac{x + y - |x - y|}{2}$
+
+    \vspace*{0.1cm}
+
+    \tabto{5.25cm} = $x + y + \frac{|x-y|}{2} - \frac{|x-y|}{2}$
+
+    \tabto{5.25cm} = $x + y$
+
+    \tabto{1cm} Therefore, max\{$x, y$\} + min\{$x, y$\} = $x + y\ \square$
+
+    \newpage
+
+    %   ___                         _     _                     _____ 
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     |___ / 
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \      |_ \ 
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |    ___) |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |____/ 
+
+    \question[3]{Prove that there are no integer solutions to the equation: $x^{10} + y^{10} = 2022$}
+
+    \textbf{Assumption:} $x, y \in \mathbb{Z}$
+    
+    \textbf{Conclusion:} $x^{10} + y^{10} \neq 2022$
+
+    \vspace*{0.3cm}
+
+    Proof: Suppose $x, y \in \mathbb{Z}$
+
+    So, $1^{10} = 1$, $2^{10} = 1024$, and $3^{10} = 59049$
+
+    Since $2^{10} < 2022 < 3^{10}$, $x$ and $y$ must be less than $3$
+
+    Therefore, by definition of an integer, $x$ and $y$ must be either 1 or 2
+
+    \vspace*{0.1cm}
+
+    \textbf{Case 1:} $x$ and $y$ are different values. Without loss of generality, $x = 1$ and $y = 2$
+    
+    $x^{10} + y^{10} = 1^{10} + 2^{10}$
+
+    \tabto{2.02cm} = 1 + 1024
+
+    \tabto{2.02cm} = 1025
+
+    Therefore, when $x = 1$ and $y = 2$, the sum of $x^{10} + y^{10} \neq 2022$ 
+
+    \textbf{Case 2:} $x$ and $y$ are equal to 1
+
+    $x^{10} + y^{10} = 1^{10} + 1^{10}$
+
+    \tabto{2.02cm} = 1 + 1
+
+    \tabto{2.02cm} = 2
+
+    Therefore, when $x = 1$ and $y = 2$, the sum of $x^{10} + y^{10} \neq 2022$ 
+
+    \textbf{Case 3:} $x$ and $y$ are equal to 2
+
+    $x^{10} + y^{10} = 2^{10} + 1^{10}$
+
+    \tabto{2.02cm} = 1024 + 1024
+
+    \tabto{2.02cm} = 2048
+
+    Therefore, when $x = 1$ and $y = 2$, the sum of $x^{10} + y^{10} \neq 2022$ 
+
+    \vspace*{0.1cm}
+
+    $x^{10} + y^{10} \neq 2022$ is true in all cases
+    
+    Therefore, there are no integer solutions to the equation: $x^{10} + y^{10} = 2022\ \square$
+
+    \newpage
+
+    %   ___                         _     _                     _  _   
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     | || |  
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    | || |_ 
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |   |__   _|
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|      |_|  
+
+    \question[4]{Using proof by contrapositive, prove the following statement: Suppose $m, n \in \mathbb{Z}.$ If both $m \cdot n$ and $m+n$ are even, then 
+    both $m$ and $n$ are even}
+
+    %Even($x$) = $2 | x$
+
+    %Even($m \cdot n$) $\land$ Even($m+n$) $\rightarrow$ Even($m$) $\land$ Even($n$)
+
+    \textbf{Assumption:} $m, n \in \mathbb{Z}$
+    
+    \textbf{Conclusion:} $m$ and $n$ are even
+
+    Proof: Assume $m, n \in \mathbb{Z}$
+
+    For sake of proof by contrapositive, if $m$ or $n$ is odd, then $m \cdot n$ is odd or $m+n$ is odd
+
+    $m$ and $n$ can have the same parity or opposite parity
+
+    \vspace*{0.1cm}
+
+    \textbf{Case 1:} $m$ and $n$ have the same parity, therefore are both odd
+
+    By definition of odd, $m = 2x + 1$ such that $x \in \mathbb{Z}$ 
+    
+    By definition of odd, $n = 2y + 1$ such that $y \in \mathbb{Z}$
+
+    $m \cdot n$ = ($2x + 1$)($2y + 1$)
+
+    \tabto*{1.42cm} = $4xy + 2x + 2y + 1$
+
+    \tabto*{1.42cm} = $2(2xy + x + y) + 1$
+
+    \tabto*{1.42cm} = $2z + 1$ for some $z \in \mathbb{Z}$ such that $z = 2xy + x + y$
+
+    So, by definition of odd, $m \cdot n$ is odd
+
+    Therefore, when $m$ and $n$ are both odd, $m \cdot n$ is odd.
+
+    \vspace*{0.1cm}
+
+    \textbf{Case 2:} $m$ and $n$ have opposite parity. Without loss of generality, $m$ is odd and $n$ is even
+
+    By definition of even, $m = 2x$ such that $x \in \mathbb{Z}$ 
+    
+    By definition of odd, $n = 2y + 1$ such that $y \in \mathbb{Z}$
+
+    $m + n$ = $2x + 2y + 1$
+
+    \tabto*{1.6cm} = $2(x + y) + 1$
+
+    \tabto*{1.6cm} = $2z + 1$ for some $z \in \mathbb{Z}$ such that $z = x + y$
+
+    So, by definition of odd, $m + n$ is odd
+    
+    Therefore,when $m$ and $n$ have opposite parity, $m+n$ is odd.
+
+    \vspace*{0.1cm}
+
+    It is true that $m \cdot n$ is odd or $m+n$ is odd in both cases
+
+    Therefore, by proof by contrapositive, if both $m \cdot n$ and $m+n$ are even, then both $m$ and $n$ are 
+    \tabto{0.5cm}even $\square$
+
+    %   ___                         _     _                     ____  
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     | ___| 
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    |___ \ 
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |    ___) |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |____/ 
+                                                                   
+
+    \question[5]{If $x^3 + 9x^7 + x \geq x^2+x^6+x^4$, then $x \geq$ 0}
+
+    Proof: Assume $x \in \mathbb{R}$
+
+    For sake of proof by contrapositive, if $x < 0$, then $x^3 + 9x^7 + x < x^2+x^6+x^4$
+
+    By definition of a negative number, $x = -n$ such that $n \in \mathbb{R}$ and $n \geq 0$
+
+    $x^3 + 9x^7 + x$ = $(-n)^3 + 9(-n)^7 + (-n)$
+
+    \tabto{2.6cm} = $-n^3 - 9n^7 - n$
+
+    \tabto{2.6cm} = $-(n^3 + 9n^7 + n)$
+
+    \tabto{2.6cm} = $-k_1$ such that $k_1 \in \mathbb{R}$ where $k_1 = n^3 + 9n^6 + n$
+
+    $x^2+x^6+x^4$ = $(-n)^2+(-n)^6+(-n)^4$
+
+    \tabto{2.6cm} = $n^2+n^6+n^4$
+
+    \tabto{2.6cm} = $k_2$ such that $k_2 \in \mathbb{R}$ where $k_2 = n^2+n^6+n^4$
+
+    since, $k_1 < k_2$, we know that $x^3 + 9x^7 + x < x^2+x^6+x^4$
+
+    Therefore, by proof by contraposition, it is true if $x^3 + 9x^7 + x \geq x^2+x^6+x^4$, then $x \geq$ 0 $\square$
+
+    \newpage
+
+    %   ___                         _     _                      __   
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __      / /_  
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    | '_ \ 
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |   | (_) |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|    \___/ 
+                                                                   
+
+    \question[6]{There are no integers $a$ and $b$ such that $20a + 4b = 1$}
+
+    1) There exists integers $a$ and $b$ such that $20a + 4b = 1$
+
+    2) There are no integers $a$ and $b$ such that $20a + 4b = 1$
+
+    3)
+
+    Proof: Assume $\exists a, b \in \mathbb{Z}\ 20a + 4b = 1$
+
+    So, $20a + 4b = 1\ \equiv\ 2(10a + 2b) = 1$
+
+    \tabto{3.26cm}$\equiv\ 2(10a + 2b) = 1$
+
+    \tabto{3.26cm}$\equiv\ 2k = 1$ such that $k \in \mathbb{Z}$ where $k = 10a + 2b$
+
+    By definition of even, 1 is even
+
+    A contradiction has been found
+
+    Therefore, there are no integers $a$ and $b$ such that $20a + 4b = 1\ \square$ 
+
+
+
+    %   ___                         _     _                     _____ 
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     |___  |
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \       / / 
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |     / /  
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|    /_/   
+                                                                   
+
+    \question[7]{For real number $a$ and $b$, if $a$ is rational and $ab$ is irrational, then $b$ is irrational}
+
+    1) For $a, b \in \mathbb{R}$ and $a$ is irrational and $ab$ is rational, then $b$ is rational
+
+    2) $b$ is irrational
+
+    3) 
+
+    Proof: Suppose $a, b \in \mathbb{R}$
+
+    For sake of proof by contradiction, assume that $a$ is rational and $ab$ is irrational and $b$ is rational
+    
+    Then, $\exists w, x \in \mathbb{Z}$ such that $a = w/x$ where $x \neq 0$
+
+    Let the fraction be fully reduced. That means there are no common factors between $w$ and $x$
+    
+    Then, $\exists y, z \in \mathbb{Z}$ such that $b = y/z$ where $z \neq 0$
+
+    Let the fraction be fully reduced. That means there are no common factors between $y$ and $z$
+
+    So, $ab$ = $\frac{w}{x} \cdot \frac{y}{z}$ 
+    
+    \vspace*{0.1cm}
+
+    \tabto*{1.55cm} = $\frac{wy}{xz}$
+
+    \vspace*{0.1cm}
+
+    \tabto*{1.55cm} = $\frac{m}{n}$ such that $m, n \in \mathbb{Z}$ where $m = wy$ and $n = xz$
+
+    By definition of a rational number, $ab$ is rational
+
+    We arrive at a contradiction where $ab$ is rational and irrational.
+
+    Therefore, by proof by contradiction, if $a$ is rational and $ab$ is irrational, then $b$ is irrational. $\square$
+
+
+
+
+    
+
+    %For sake of proof by contradiction, we assume that $b$ is rational
+
+    %Also, $\neg \exists x_2, y_2 \in \mathbb{Z}$ such that $ab = x_2/y_2$ where $y_2 \neq 0$
+
+    %Then, $\exists x_2, y_2 \in \mathbb{Z}$ such that $b = x_2/y_2$ where $y_2 \neq 0$
+
+    %Let the fraction be fully reduced. That means there are no common factors between $x_2$ and $y_2$
+
+    
+\end{document}
