@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1645209873 "/Users/kinner/Documents/School/CMPSC360/HW 5/hw5.tex" "/Users/kinner/Documents/School/CMPSC360/HW 5/hw5.pdf" "hw5" 1645209873
+["pdflatex"] 1645209873 "/Users/kinner/Documents/School/CMPSC360/HW 5/hw5.tex" "/Users/kinner/Documents/School/CMPSC360/HW 5/hw5.pdf" "hw5" 1645209916
   "/Users/kinner/Documents/School/CMPSC360/HW 5/hw5.aux" 1645209873 32 2d1df76398b3c48c6419a45a7331db2d ""
-  "/Users/kinner/Documents/School/CMPSC360/HW 5/hw5.tex" 1645209872 14340 919daeba30ebd5671620fedf0ffc8b9e ""
+  "/Users/kinner/Documents/School/CMPSC360/HW 5/hw5.tex" 1645209916 14340 919daeba30ebd5671620fedf0ffc8b9e ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -67,10 +67,10 @@
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "hw5.aux" 1645209873 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
-  "hw5.tex" 1645209872 14340 919daeba30ebd5671620fedf0ffc8b9e ""
+  "hw5.tex" 1645209916 14340 919daeba30ebd5671620fedf0ffc8b9e ""
   (generated)
   "/Users/kinner/Documents/School/CMPSC360/HW 5/hw5.log"
-  "hw5.log"
   "hw5.aux"
-  "hw5.pdf"
   "/Users/kinner/Documents/School/CMPSC360/HW 5/hw5.pdf"
+  "hw5.pdf"
+  "hw5.log"
