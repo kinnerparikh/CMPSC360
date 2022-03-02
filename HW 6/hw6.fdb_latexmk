@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1646247435 "/Users/kinner/Documents/School/CMPSC360/HW 6/hw6.tex" "/Users/kinner/Documents/School/CMPSC360/HW 6/hw6.pdf" "hw6" 1646247436
+["pdflatex"] 1646247435 "/Users/kinner/Documents/School/CMPSC360/HW 6/hw6.tex" "/Users/kinner/Documents/School/CMPSC360/HW 6/hw6.pdf" "hw6" 1646247468
   "/Users/kinner/Documents/School/CMPSC360/HW 6/hw6.aux" 1646247436 32 044b7f8fc9779af7531264e0c5c84b6d ""
   "/Users/kinner/Documents/School/CMPSC360/HW 6/hw6.tex" 1646247435 5847 3c643e5612607dcd9238b1f51479320d ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -69,8 +69,8 @@
   "hw6.aux" 1646247436 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
   "hw6.tex" 1646247435 5847 3c643e5612607dcd9238b1f51479320d ""
   (generated)
-  "hw6.pdf"
-  "hw6.log"
-  "/Users/kinner/Documents/School/CMPSC360/HW 6/hw6.pdf"
-  "/Users/kinner/Documents/School/CMPSC360/HW 6/hw6.log"
   "hw6.aux"
+  "/Users/kinner/Documents/School/CMPSC360/HW 6/hw6.log"
+  "hw6.pdf"
+  "/Users/kinner/Documents/School/CMPSC360/HW 6/hw6.pdf"
+  "hw6.log"
