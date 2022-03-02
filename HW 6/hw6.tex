@@ -1,0 +1,178 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: #2
+\end{flushleft}}
+
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 360} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{15pt}
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[6]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+    
+    \question[1]{Suppose $a, b \in \mathbb{Z}$. If $4 | (a^2 + b^2)$, then $a$ and $b$ are not both odd.}
+
+    Proof: Suppose $a, b \in \mathbb{Z}$.
+
+    For sake of contradiction, assume that $a$ and $b$ are both odd.
+
+    By definition of odd, $a = 2x + 1$ and $b = 2y + 1$ such that $x,y \in \mathbb{Z}$
+
+    By definition of divides, $a^2 + b^2 = 4z$ such that $z \in \mathbb{Z}$
+
+    \vspace*{0.1cm}
+
+    $a^2 + b^2 = (2x + 1)^2 + (2y + 1)^2 = 4z$
+
+    \tabto*{1.7cm} $= 4x^2 + 4x + 1 + 4y^2 + 4y + 1 = 4z$
+
+    \tabto*{1.7cm} $= 4x^2 + 4x + 4y^2 + 4y + 2 = 4z$
+
+    \tabto*{1.7cm} $= 4t + 2$ such that $t \in \mathbb{Z}$ where $t = x^2 + x + y^2 + y$
+
+    So, $4t + 2 \neq 4z$, which means $a^2 + b^2 \neq 4z$
+
+    We have arrived at a contradiction, where $a^2 + b^2 = 4z$ and $a^2 + b^2 \neq 4z$ when $a$ and $b$ are odd
+
+    Therefore, by sake of proof by contradiction, if $4 | (a^2 + b^2)$, then $a$ and $b$ are not both odd. $\square$
+
+    \question[2]{Show that $\forall a,b \in \mathbb{Z},\ gcd(a, b) = b \leftrightarrow b \mid a. $}
+
+    Proof:
+    
+    Suppose $a, b \in \mathbb{Z}$
+
+    \textbf{Case 1:} $gcd(a, b) = b \rightarrow b \mid a$
+
+    \tabto{1cm} By definition, $gcd(a, b) = b$ means that $b \mid b$ and $b \mid a$ where $b \neq 0$
+
+    \tabto{1cm} Therefore, $gcd(a, b) = b \rightarrow b \mid a$
+
+    \textbf{Case 2:} $b \mid a \rightarrow gcd(a, b) = b $
+
+    \tabto{1cm} Suppose $b \mid a$
+
+    \tabto{1cm} We also know that $b \mid b$
+
+    \tabto{1cm} By definition of $gcd$ and since $b \mid a$ and $b \mid b$, we can say that $gcd(a, b) = b$.
+
+    \tabto{1cm} Therefore, $b \mid a \rightarrow gcd(a, b) = b$
+
+    Therefore, $\forall a, b, \in \mathbb{Z}, \ gcd(a, b) = b \leftrightarrow b \mid a\ \square$
+
+    \question[3]{Is $\mathbb{R} = \{(x, y) \mid (x - y)\ \text{is divisible by}\ 17\}$ an equivalence relation?}
+
+    
+
+    \question[4]{Suppose Neverland country (which is a fictional one), contains N cities. We define 
+    relation $\mathbb{R}$ as follows: If there is a route between two cities $(c_i, c_j)$ for $1 \leq i, j \leq$ N, then we have
+    $(c_i, c_j) \in \mathbb{R}$. We also assume that roads are in both directions in Neverland country. Is $\mathbb{R}$ an 
+    equivalence relation? If so, what are the equivalence classes?}
+
+    \question[5]{For $n$-dimensional vectors $x, y \in \mathbb{R}^n$, we would say $x \preceq y$ if for every $0 \leq i \leq n$, we
+    would have $x_i \leq y_i$ where $x_i$ is the $i$-th element of $x$. Is $\preceq$ a partial order? Prove or disprove.}
+
+    \question[6]{}
+
+    \question[7]{Let $f(x) = 2x$ where the domain is the set of real numbers. What is}
+
+    (a) $f(\mathbb{N})$
+
+    (b) $f(\mathbb{Q})$
+
+    (c) $f(\mathbb{R})$
+
+    \question[8]{}
+
+    \question[9]{Let $A = \{a_1, a_2, \ldots \}$ such that there are 4 elements in A. That is, $|A| = 4$. Similarly,
+    let $B = \{b_1, b_2, \ldots \}$ such that $|B| = 2$. How many possible relations can be defined from $A$ to $B$?}
+
+    \question[10]{Consider the set $A = {1, 2, 9, 11, 18}$ having relation
+    $R = \{(1, 1), (2, 2), (9, 9), (11, 11), (18, 18), (1, 2), (2, 1), (11, 1), (1, 11), (18, 9), (9, 18) \}$, find 
+    equivalence class of the following:}
+
+    a) $[|1|]$
+
+    b) $[|2|]$
+
+    c) $[|9|]$
+
+    d) $[|11|]$
+
+    e) $[|18|]$
+
+    \question[11]{Let: $f: \mathbb{R} \rightarrow \mathbb{R}$ by $f(x) = \frac{5x}{3} - 2$. Prove that $f$ is a one to one function.}
+
+    Proof:
+
+    Assume that $x_1$ and $x_2$ belong to $\mathbb{R}$
+
+    Suppose $f(x_1) = f(x_2)$
+
+    \vspace*{0.1cm}
+
+    Definition of the function $\frac{5x_1}{3} - 2 = \frac{5x_2}{3} - 2$
+
+    \vspace*{0.1cm}
+
+    \tabto*{5.15cm} $\frac{5x_1}{3} = \frac{5x_2}{3}$ \tabto*{8cm} Add 2 to both sides
+
+    \tabto*{5.15cm} $5x_1 = 5x_2$ \tabto*{8cm} Multiply 3 by both sides
+
+    \tabto*{5.33cm} $x_1 = x_2$ \tabto*{8cm} Divide both sides by 5
+
+    Therefore, since $x_1 = x_2$, this is an injective function. $\square$
+
+    \question[12]{Let: $f: \mathbb{R} \rightarrow \mathbb{R}$ by $f(x) = \frac{x}{2} + 3$ a surjection (onto)? If it is, constructs the proof, 
+    otherwise, give a counterexample.}
+
+    Proof:
+
+    Assume that $a \in \mathbb{R}$
+    
+    We must show that $\exists x \in \mathbb{R}$ such that $f(x) = a$
+
+    So, $a = \frac{x}{2} + 3$
+
+    \tabto{1cm} $a-3 = \frac{x}{2}$
+
+    \tabto{1cm} $2a - 6 = x$
+
+    So, substituting for $x$, $f(x) = \frac{2a - 6}{2} + 3$
+
+    \tabto{4.82cm} = $a - 3 + 3$
+
+    \tabto{4.82cm} = $a$
+
+    Since $f(x) = a$, we know that it is onto. $\square$
+
+
+
+    
+\end{document}
