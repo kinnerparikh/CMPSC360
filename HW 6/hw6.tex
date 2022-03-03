@@ -84,48 +84,130 @@
 
     \tabto{1cm} Therefore, $b \mid a \rightarrow gcd(a, b) = b$
 
-    Therefore, $\forall a, b, \in \mathbb{Z}, \ gcd(a, b) = b \leftrightarrow b \mid a\ \square$
+    Therefore, $\forall a, b \in \mathbb{Z}, \ gcd(a, b) = b \leftrightarrow b \mid a\ \square$
+
+    \newpage
 
     \question[3]{Is $\mathbb{R} = \{(x, y) \mid (x - y)\ \text{is divisible by}\ 17\}$ an equivalence relation?}
 
+    Proof: Assume that $\mathbb{R} = \{(x, y) \mid (x - y)\ \text{is divisible by}\ 17\}$
+
+    This means that $17 \mid (x-y)$
+
+    By definition of divides $x - y = 17a$ such that $a \in \mathbb{Z}$
+
+    For a statement to be an equivalence relation, it must be reflexive, symmetric, and transitive.
+
+    \textbf{Case 1:} reflexive
+
+    \tabto{1cm} Assume $(x, x)$
+
+    \tabto{1cm} so $x - y = 17a$ goes to $x - x = 17a$
+
+    \tabto{1cm} This means that $0 = 17a$, for which this is a valid statement since $17 \mid 0$
+
+    \tabto{1cm} So $\forall x \exists y\ y = x$ is true and $(x, y) \in \mathbb{R}$
+
+    \tabto{1cm} Therefore, $\mathbb{R}$ is reflexive
+
+    \textbf{Case 2:} Symmetric
+
+    \tabto{1cm} Suppose $x - y = 17a$ for some $(x, y)$
     
+    \tabto{1cm} To prove symmetry, take the case $(y, x)$
+
+    \tabto{1cm} So, $y - x = 17b$ such that $b \in \mathbb{Z}$
+
+    \tabto{1cm} Since this can simplify down to $-(x - y) = 17b$, we know that $b = -a$
+
+    \tabto{1cm} Thus, $17 | (y - x)$ which means that $(y, x) \in \mathbb{R}$
+
+    \tabto{1cm} Therefore, $\mathbb{R}$ is symmetric
+
+    \textbf{Case 3:} Transitive
+
+    \tabto{1cm} Proof for transitivity: $\exists a, b, c\ (a, b), (b, c) \in \mathbb{R} \rightarrow (a, c) \in \mathbb{R}$
+
+    \tabto{1cm} Suppose $a, b, c \in \mathbb{Z}$
+
+    \tabto{1cm} We can say that $17 \mid (a - b)$ and $17 \mid (b - c)$
+
+    \tabto{1cm} By definition of divides, $a - b = 17p$ and $b - c = 17q$ such that $p, q \in \mathbb{Z}$
+
+    \tabto{1cm} By algebra, $a = 17p + b$ and $c = b - 17q$
+
+    \tabto{1cm} So for $(a, c)$, we get $17 \mid (a - c)$
+
+    \tabto{1cm} Substituting $a$ and $c$, $17 \mid [(17p + b) - (b - 17q)]$
+
+    \tabto{3.98 cm} = $17 \mid (17p + b - b + 17q)$
+
+    \tabto{3.98 cm} = $17 \mid (17p + 17q)$
+
+    \tabto{3.98 cm} = $17 \mid [17(p + q)]$
+
+    \tabto{3.98 cm} = $17 \mid 17t$ such that $t \in \mathbb{Z}$ where $t = p + q$
+
+    \tabto{1cm} So, by definition of divides, we know that this is divisible by 17.
+
+    \tabto{1cm} Therefore, $\mathbb{R}$ is transitive
+
+    Since $\mathbb{R}$ is reflexive, symmetric, and transitive, it is an equivalence relation. $\square$
 
     \question[4]{Suppose Neverland country (which is a fictional one), contains N cities. We define 
     relation $\mathbb{R}$ as follows: If there is a route between two cities $(c_i, c_j)$ for $1 \leq i, j \leq$ N, then we have
     $(c_i, c_j) \in \mathbb{R}$. We also assume that roads are in both directions in Neverland country. Is $\mathbb{R}$ an 
     equivalence relation? If so, what are the equivalence classes?}
 
+    $\mathbb{R}$ is an equivalence relation.
+
+    $[i] = \{j \leq (N - 1) \}$
+
+    $[j] = \{i \leq (N - 1) \}$
+
+    \newpage
+
     \question[5]{For $n$-dimensional vectors $x, y \in \mathbb{R}^n$, we would say $x \preceq y$ if for every $0 \leq i \leq n$, we
     would have $x_i \leq y_i$ where $x_i$ is the $i$-th element of $x$. Is $\preceq$ a partial order? Prove or disprove.}
+
+    Proof:
 
     \question[6]{}
 
     \question[7]{Let $f(x) = 2x$ where the domain is the set of real numbers. What is}
 
-    (a) $f(\mathbb{N})$
+    (a) $f(\mathbb{N}) \rightarrow \{ x \in \mathbb{N} \mid 2x \}$
 
-    (b) $f(\mathbb{Q})$
+    (b) $f(\mathbb{Q}) \rightarrow \{ x \in \mathbb{Q} \mid 2x \}$
 
-    (c) $f(\mathbb{R})$
+    (c) $f(\mathbb{R}) \rightarrow \{ x \in \mathbb{R} \mid 2x \}$
 
     \question[8]{}
 
+    (a) no properties
+
+    (b) (4, 4)
+
+    (c) (1, 2) and (4, 1)
+
     \question[9]{Let $A = \{a_1, a_2, \ldots \}$ such that there are 4 elements in A. That is, $|A| = 4$. Similarly,
     let $B = \{b_1, b_2, \ldots \}$ such that $|B| = 2$. How many possible relations can be defined from $A$ to $B$?}
+
+
 
     \question[10]{Consider the set $A = {1, 2, 9, 11, 18}$ having relation
     $R = \{(1, 1), (2, 2), (9, 9), (11, 11), (18, 18), (1, 2), (2, 1), (11, 1), (1, 11), (18, 9), (9, 18) \}$, find 
     equivalence class of the following:}
 
-    a) $[|1|]$
+    a) $[|1|] \rightarrow \{1, 2, 11\}$
 
-    b) $[|2|]$
+    b) $[|2|] \rightarrow \{2, 1\}$
 
-    c) $[|9|]$
+    c) $[|9|] \rightarrow \{9, 18\}$
 
-    d) $[|11|]$
+    d) $[|11|] \rightarrow \{11, 1\}$
 
-    e) $[|18|]$
+    e) $[|18|] \rightarrow \{18, 9\}$
 
     \question[11]{Let: $f: \mathbb{R} \rightarrow \mathbb{R}$ by $f(x) = \frac{5x}{3} - 2$. Prove that $f$ is a one to one function.}
 

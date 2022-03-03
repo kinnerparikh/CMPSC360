@@ -1,0 +1,125 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: \textit{#2}
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Class Quiz #1}
+            
+            CMPSC 360} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{15pt}
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[5]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+    
+    \question[5]{For all real numbers $x$ and $y$, if $x + y \geq 2$, then either $x \geq 1$ or $y \geq 1$}
+
+    Proof:
+    
+    Assume that $x, y \in \mathbb{R}$
+    
+    For sake of proof by contradiction, prove that if $x + y \geq 2$, then $x < 1$ and $y < 1$
+
+    Assume for the sake of argument that the maximum value of $x$ and $y$ is 1.
+
+    So, $x + y = 2$. 
+
+    However, applying the bounding rules, we know that $x + y < 2$.
+
+    We have arrived at a contradiction.
+
+    Therefore, for all real numbers $x$ and $y$, if $x + y \geq 2$, then either $x \geq 1$ or $y \geq 1$.
+
+    \newpage
+
+    \question[6]{A relation $\mathbb{R}$ is defined on integers as follows: $\forall a, b \in \mathbb{Z}, a\ \mathbb{R}\ b \leftrightarrow 3 \mid (a^2-b^2)$. Determine if R is an equivalence relation.}
+
+    Proof:
+
+    Assume that $\forall a, b \in \mathbb{Z}\ 3 \mid (a^2-b^2)$
+
+    By definition of divides, $a^2 - b^2 = 3t$ for some $t \in \mathbb{Z}$
+
+    An equivalence relation must be reflexive, symmetric, and transitive
+
+    \textbf{Case 1:} Reflexive
+
+    \tabto{1cm} Assume that $b = a$
+
+    \tabto{1cm} So, $a^2 - b^2 = a^2 - a^2$ \tabto*{5cm} plugging in $a$ for $b$
+
+    \tabto{2.75cm} = 0 \tabto*{5cm} Subtraction
+
+    \tabto{1cm} This means that 0 = $3t$. This statement is true.
+
+    \tabto{1cm} Therefore, this relation is reflexive.
+
+    \textbf{Case 2:} Symmetric
+
+    \tabto{1cm} Suppose $a^2 - b^2 = 3t$ for some $(a, b)$
+    
+    \tabto{1cm} To prove symmetry, take the case $(b, a)$
+
+    \tabto{1cm} So, $3 \mid b^2 - a^2$
+
+    \tabto{1cm} By definition of divides $b^2 - a^2 = 3k$ for some $k \in \mathbb{Z}$
+
+    \tabto{1cm} Rearranging, $-(a^2 - b^2) = 3k$ for some $k \in \mathbb{Z}$
+
+    \tabto{1cm} So, $k = -t$. Therefore, the relation is valid for $(a, b)$ and $(b, a)$
+
+    \tabto{1cm} Therefore, the relation is symmetric.
+
+    \textbf{Case 3:} Transitive
+
+    \tabto{1cm} Proof for transitivity: $\exists a, b, c\ (a, b), (b, c) \in \mathbb{R} \rightarrow (a, c) \in \mathbb{R}$
+
+    \tabto{1cm} Suppose $x, y, z \in \mathbb{Z}$
+
+    \tabto{1cm} We can say that $3 \mid (x^2 - y^2)$ and $3 \mid (y^2 - z^2)$
+
+    \tabto{1cm} By definition of divides, $x^2 - y^2 = 3p$ and $y^2 - z^2 = 3q$ such that $p, q \in \mathbb{Z}$
+
+    \tabto{1cm} By algebra, $x^2 = 3p+y^2$ and $z = y^2 - 3q$
+
+    \tabto{1cm} So for the case $(x, z)$ we get $3 \mid (x^2 - z^2)$
+
+    \tabto{5.01cm} = $3 \mid (3p+y^2 - y^2 - 3q)$
+
+    \tabto{5.01cm} = $3 \mid (3p - 3q)$
+
+    \tabto{5.01cm} = $3 \mid 3(p - q)$
+
+    \tabto{5.01cm} = $3 \mid 3t$ such that $t \in \mathbb{Z}$ where $t = p - q$ 
+
+    \tabto{1cm} So, by definition of divides, we know that this is divisible by 3.
+    
+    \tabto{1cm} Therefore, the relation is transitive.
+
+    Since the relation is reflexive, symmetric, and transitive, we know that R is an equivalence relation.
+
+\end{document}
