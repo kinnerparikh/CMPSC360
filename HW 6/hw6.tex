@@ -161,9 +161,7 @@
 
     $\mathbb{R}$ is an equivalence relation.
 
-    $[i] = \{j \leq (N - 1) \}$
-
-    $[j] = \{i \leq (N - 1) \}$
+    $[C_a] = \{C_b \mid$ a route exists from $C_b$ to $C_a \}$
 
     \newpage
 
@@ -171,6 +169,57 @@
     would have $x_i \leq y_i$ where $x_i$ is the $i$-th element of $x$. Is $\preceq$ a partial order? Prove or disprove.}
 
     Proof:
+
+    Suppose that $n$-dimensional vectors $x, y \in \mathbb{R}^n$.
+
+    When $0 \leq i \leq n$, we can say that $x_i \leq y_i$ such that $x_i$ and $y_i$ are the i-th element of $x$ and $y$.
+
+    For the relation to be a partial order, it must be reflexive, transitive, and antisymmetric.
+
+    \textbf{Case 1:} Reflexive
+
+    \tabto{1cm} For a reflexive case, suppose $y = x$, so $y_i = x_i$
+
+    \tabto{1cm} That means that $x_i \leq x_i$ by substitution. 
+
+    \tabto{1cm} This statement is true for all $x \in \mathbb{R}^n$.
+
+    \tabto{1cm} This relation is reflexive.
+
+    \textbf{Case 2:} Transitive
+
+    \tabto{1cm} Assume case $(a, b)$ and $(b, c)$ where $a, b, c \in \mathbb{R}^n$ 
+
+    \tabto{1cm} Substituting these pairs into the relation, we get $a_i \leq b_i$ and $b_i \leq c_i$.
+
+    \tabto{1cm} This means that $a_i \leq b_i \leq c_i$ by combination.
+
+    \tabto{1cm} This can be simplified to be that $a_i \leq c_i$.
+
+    \tabto{1cm} So the ordered pair $(a, c)$ is valid under this relation.
+
+    \tabto{1cm} Therefore, this relation is transitive.
+
+    \textbf{Case 3:} Antisymmetric
+
+    \tabto{1cm} Assume case $(y, x)$.
+
+    \tabto{1cm} Substituting into the relation we get $y_i \leq x_i$.
+
+    \tabto{1cm} Since we know that $x_i \leq y_i$, the ordered pair $(y, x)$ is not valid.
+
+    \tabto{1cm} Therefore, this relation is antisymmetric.
+
+    The relationship is reflexive, transitive, and antisymmetric.
+
+    Therefore, for $n$-dimensional vectors $x, y \in \mathbb{R}^n$, we would say $x \preceq y$ if for every $0 \leq i \leq n$, we
+    
+    
+        would have $x_i \leq y_i$ where $x_i$ is the $i$-th element of $x$ is a partial order. $\square$
+
+
+
+
 
     \question[6]{}
 
