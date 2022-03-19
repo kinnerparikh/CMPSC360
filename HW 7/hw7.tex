@@ -1,0 +1,357 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+\usepackage{array}
+
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: #2
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 360} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{15pt}
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[7]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+
+
+    %   ___                         _     _                     _ 
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     / |
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    | |
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |   | |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |_|
+                                                               
+
+    \question[1]{}
+
+    Base Case: \tabto*{3.8cm} $a_1 = 1$
+
+    Recurrence relation: $a_n = a_{n - 1} \cdot n$ for $n \geq 2$
+
+    %   ___                         _     _                     ____  
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     |___ \ 
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \      __) |
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |    / __/ 
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |_____|
+
+    \question[2]{}
+
+    a) Base Case: \tabto*{4.25cm} $a_1 = 15$
+
+    \tabto{0.97cm} Recurrence relation: $a_n = a_{n - 1} - 7$ for $n \geq 2$
+
+    \hspace{0.1cm}
+
+    b) $(-1)^{n - 1}\cdot \frac{n-1}{n}$ for all integers $n \geq 1$
+
+    %   ___                         _     _                     _____ 
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     |___ / 
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \      |_ \ 
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |    ___) |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |____/ 
+                                                                   
+    
+    \question[3]{}
+
+    a) Domain: $(-16, -4) \cup [4, \infty)$
+
+    b) Co-domain: $\mathbb{R}$
+    
+    c) Image: $(-8, -2) \cup [-16, \infty]$
+
+    d) Prove it is injective
+
+    \tabto*{0.98cm} Proof:  Let $x_1, x_2 \in (-16, -4) \cup [4, \infty)$
+
+    \vspace{0.4cm}
+    \tabto*{0.98cm} 
+    $f(x) = \begin{cases}
+        -x^2, &\text{if } x \geq 0 \\
+        \frac{x}{2}, &\text{if } x < 0 \\
+    \end{cases}$
+
+    \vspace{0.4cm}
+    \tabto{0.98cm} \textbf{Case 1:} $x_1, x_2 \in [4, \infty)$
+
+    \tabto{1.5cm} From the definition of the function, $-x_1^2 = -x_2^2$
+
+    \vspace{0.1cm}
+    \tabto{7.35cm} $x_1^2 = x_2^2$ [divide by -1]
+
+    \tabto{7.35cm} $x_1 = x_2$ [square root]
+
+    \tabto{1.5cm} So, when $x_1, x_2 \in [4, \infty)$, $f$ is injective
+
+    \tabto*{0.98cm} \textbf{Case 2:} $x_1, x_2 \in (-16, -4)$
+
+    \tabto{1.5cm} From the definition of the function, $\frac{x_1}{2} = \frac{x_2}{2}$
+
+    \tabto{7.1cm} $x_1 = x_2$ [multiply by 2]
+
+    \tabto{1.5cm} So, when $x_1, x_2 \in (-16, -4)$, $f$ is injective
+
+    \tabto*{0.98cm} \textbf{Case 3:} Without loss of generality, $x_1 \in (-16, -4)$ and $x_2 \in [4, \infty)$
+
+    \tabto{1.5cm} From the definition of the function, $f(x_1) = \frac{x_1}{2}, f(x_2)=-x_2^2$
+
+    \tabto{1.5cm} Taking the inverse of $f(x_1)$, we get $f^{-1}(x_1) = 2x_1$
+
+    \tabto{1.5cm} Taking the inverse of $f(x_2)$, we get $f^{-1}(x_2) = \sqrt{x_2}$
+
+    \tabto{1.5cm} Since both functions are invertible, this function is injective
+
+    \tabto{0.98cm}The function is injective in all cases
+    
+    \tabto{0.98cm}Therefore $f$ is injective. $\square$
+    
+    e) Proof: From the definitions of the codomain and the image above, we notice that they are 
+    \tabto{0.98cm}not the same.
+
+    \tabto{0.98cm}Therefore, $f$ is not surjective.
+
+    %   ___                         _     _                     _  _   
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     | || |  
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    | || |_ 
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |   |__   _|
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|      |_|  
+                                                                    
+
+    \question[4]{Let $f: C \rightarrow B$ and $g: A \rightarrow C$. Suppose that $f \circ g$ is bijective.} 
+
+    a) Proof: Assume that $f \circ g$ is bijective.
+
+    By definition of bijective, we know that $f \circ g$ is both injective and surjective.
+
+    Case 1: $g$ is injective
+
+    \tabto*{1cm} For the sake of contradiction, assume that $g$ is not injective
+
+    \tabto*{1cm} By definition, we know that $\exists x, y$ where $x \neq y$ such that $g(x) = g(y)$
+
+    \tabto*{1cm} We know that $f \circ g$ is injective, so we know that there cannot be a case where $g(x) = g(y)$
+
+    \tabto*{1cm} We have arrived at a contradiction, where $\exists x, y\ g(x) = g(y)$ and $\forall x, y\ g(x) \neq g(y)$
+ 
+    \tabto*{1cm} Therefore, $g$ must be injective.
+
+    Case 2: $f$ is surjective
+
+    \tabto*{1cm} Take some arbitrary $b \in B$ and some arbitrary $a \in A$ such that $f(g(a)) = b$
+
+    \tabto*{1cm} Set $g(a) = x$, so $f(x) = b$
+
+    \tabto*{1cm} Thus, $f$ is surjective
+
+    Therefore, $g$ is injective and $f$ is surjective when $f \circ g$ is bijective. $\square$
+
+    b) Consider $A = \{\alpha\}, B = \{\beta\}, C = \{\gamma_1, \gamma_2\}$
+
+    Take the case of $f(g(\alpha))$. $g(\alpha) = \gamma_1$ so $f(g(\alpha)) = f(\gamma_1) = \beta$.
+    
+    Since the codomain of $f \circ g$ is equal to its image, the function is surjective.
+
+    Furthermore, since the domain is $\alpha$ and as we know from above that the codomain is equal to 
+    \tabto{0.5cm}the image, the function is injective.
+
+    So, since $f \circ g$ is both surjective and injective, it is bijective.
+    
+    However, $g(\alpha)$ can result in either $\gamma_1$ or $\gamma_2$. So when plugged into $f$, we see that $f(\gamma_1) = f(\gamma_2)$.
+
+    Therefore, $f$ is not injective.
+
+
+    %   ___                         _     _                     ____  
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     | ___| 
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    |___ \ 
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |    ___) |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |____/
+
+    \question[5]{}
+
+    a) $d_{1, \texttt{blue}} = p_{1, \texttt{blue}} + p_{0, \text{min(}\texttt{yellow, green}\text{)}}$
+
+    \tabto*{0.98cm} $d_{1, \texttt{yellow}} = p_{1, \texttt{yellow}} + p_{0, \text{min(}\texttt{green, blue}\text{)}}$
+
+    \tabto*{0.98cm} $d_{1, \texttt{green}} = p_{1, \texttt{green}} + p_{0, \text{min(}\texttt{yellow, blue}\text{)}}$
+
+    b) Base Case: $d_{0, c} = p_{0, c}$
+
+    Recurrence relation: $d_{i, c} = d_{i - 1, c} + p_{i, c}$ for all $i \geq 1$
+
+    \newpage
+
+    %   ___                         _     _                      __   
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __      / /_  
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    | '_ \ 
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |   | (_) |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|    \___/ 
+                                                                    
+
+    \question[6]{}
+
+    1) 
+    \begin{alignat*}{3}
+        & f(x)\      & =\ & \frac{7 - x}{6} \\
+        & y \        & =\ & \frac{7 - x}{6}\ \text{(by definition of f)}\\
+        & 6y \       & =\ & 7 - x \\
+        & 6y - 7 \   & =\ & -x\\
+        & f^{-1}(x)\ & =\ & 7-6y
+    \end{alignat*}
+
+    2)
+    \begin{alignat*}{3}
+        &g(x)     \ &=\ &\sqrt[3]{x + 5} + 6 \\
+        &y        \ &=\ &\sqrt[3]{x + 5} + 6\ \text{(by definition of f)}\\
+        &y - 6    \ &=\ &\sqrt[3]{x + 5} \\
+        &(y - 6)^3\ &=\ &x + 5 \\
+        &(y - 6)^3\ &=\ &x + 5 \\
+        &f^{-1}(x)\ &=\ &(y - 6)^3 - 5
+    \end{alignat*}
+
+    3)
+    \begin{alignat*}{3}
+        & h(x)        &&=\ \frac{x+6}{x+2} \\
+        & y           &&=\ \frac{x+6}{x+2} \ \text{(by definition of f)} \\
+        & y(x + 2)    &&=\ x + 6 \\
+        & yx + 2y - 6 &&=\ x \\
+        & 2y - 6      &&=\ x - yx \\
+        & 2y - 6      &&=\ x(1 - y) \\
+        & f^{-1}(x)   &&=\ \frac{2y - 6}{1 - y}
+    \end{alignat*}
+
+    4)
+    \begin{alignat*}{3}
+        & f(x)            &&=\ 4 - 6x^7 \\
+        & y               &&=\ 4 - 6x^7  \ \text{(by definition of f)}  \\
+        & y - 4           &&=\ - 6x^7 \\
+        & \frac{4 - y}{6} &&=\ x^7 \\
+        & f^{-1}(x)       &&=\ \sqrt[7]{\frac{4 - y}{6}} \\
+    \end{alignat*}
+
+    %   ___                         _     _                     _____ 
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     |___  |
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \       / / 
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |     / /  
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|    /_/   
+                                                                   
+
+    \question[7]{}
+
+    $f \circ g$ = \{(a, 3), (b, 8), (c, 2), (d, 3)\}
+    
+    $f^{-1}$ = \{(2, 3), (3, 2), (8, 1)\}
+
+    $f \circ f^{-1}$ = \{(8, 8), (3,3), (2,2)\}
+
+    %   ___                         _     _                      ___  
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __      ( _ ) 
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \     / _ \ 
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |   | (_) |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|    \___/ 
+                                                                   
+
+    \question[8]{$f(x) = x + 4$, $g(x) = 5-x^2$}
+
+    a) $(f \circ g)(x) = f(5 - x^2) = 5 - x^2 + 4 =$ \hl{$9 - x^2$}
+
+    b) $(g \circ f)(x) = g(x + 4) = 5 - (x + 4)^2 = 5 - (x^2 + 8x + 16) =$ \hl{$-x^2 - 8x - 11$}
+
+    c) $(f \circ g)(-1) = 9 - (-1)^2 = 9 - 1 =$ \hl{8}
+
+    %   ___                         _     _                      ___  
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __      / _ \ 
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    | (_) |
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |    \__, |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|      /_/ 
+
+    \question[9]{}
+
+    If $F: X \rightarrow Y$ is bijective, then function $F$ has an inverse
+
+    Proof: Let $F: X \rightarrow Y$
+
+    For the sake of proof by contrapositive, assume that $F$ does not have an inverse.
+
+    That means for an arbitrary $\exists p, q$ where $p \neq q$ that satisfies the condition $F(p) = F(q)$
+
+    So, this means that the function is not injective.
+
+    Thus, the function is not bijective.
+
+    Therefore, from proof by contrapositive, we know that if $F: X \rightarrow Y$ is bijective, then function
+    
+    $F$ has an inverse. $\square$
+
+    %   ___                         _     _                     _    ___  
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     / |  / _ \ 
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    | | | | | |
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |   | | | |_| |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |_|  \___/ 
+                                                                       
+
+    \question[10]{If you randomly choose five numbers from the integers 1 through 8, then two of them must add up to 9.}
+
+    Proof:
+
+    For this set of integers, there are an invertible set of pairs of numbers that add up to 9.
+
+    The set is: \{(1, 8), (2, 7), (3, 6), (4, 5)\}
+
+    There are $k = 4$ cases in which the two values can add up to 9.
+
+    When choosing $n=5$ random integers, we see that $k < n$. 
+
+    By applying the Pigeonhole Theorem, we can conclude that at least two of the randomly chosen 
+    
+    integers must sum to 9. $\square$
+
+    %   ___                         _     _                     _   _ 
+    %  / _ \   _   _    ___   ___  | |_  (_)   ___    _ __     / | / |
+    % | | | | | | | |  / _ \ / __| | __| | |  / _ \  | '_ \    | | | |
+    % | |_| | | |_| | |  __/ \__ \ | |_  | | | (_) | | | | |   | | | |
+    %  \__\_\  \__,_|  \___| |___/  \__| |_|  \___/  |_| |_|   |_| |_|
+    
+    \question[11]{}
+
+    Let $s_n = \sum_{x=1} ^n w_x$ where $w_x$ are the total number of wins on the $x^{th}$ day.
+
+    Since there is at least one win per day, we know that $s_1 < s_2 < ... < s_{77}$, where 77 days have 
+    \tabto{0.5cm}passed in 11 weeks
+
+    Since we know that the maximum total wins is a week is 12, we know that $s_{77} \leq 12*11 = 132$
+
+    We also know that he wins at least once per day, so $1 \leq s_1$
+
+    So we can say that $1 \leq s_1 < s_2 < ... < 132$
+
+    Adding 21 to this, we get $22 \leq s_1 + 21 < s_2 + 21 < ... < 153$
+
+    Since the sequence $\{s_1, s_2, ...,s_{77}\}$ is distinct and has no repeats, we know that after adding 21 
+    \tabto{0.5cm}the sequence will be distinct.
+
+    Therefore, we can conclude that there must be some $s_i - s_j = 21$ for some $i, j$. $\square$
+    
+\end{document}

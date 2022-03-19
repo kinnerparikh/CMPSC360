@@ -22,7 +22,7 @@
 \newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
 %\newcommand\tab[1][0.4cm]{\hspace*{#1}}
 \newcommand{\maketitletwo}[2][]{\begin{center}
-        \Large{\textbf{Homework #1}
+        \Large{\textbf{Quiz #1}
             
             CMPSC 360} % Name of course here
         \vspace{5pt}
@@ -34,9 +34,27 @@
         
 \end{center}}
 \begin{document}
-    \maketitletwo[1]  % Optional argument is assignment number
+    \maketitletwo[6]  % Optional argument is assignment number
     %Keep a blank space between maketitletwo and \question[1]
     
     \question[1]{}
+
+    $a_n = (n + 1)! - 1$ for $n \geq 1$
+
+    \question[3]{}
+
+    \begin{alignat*}{3}
+        & f(x)        &&=\ \frac{4x+3}{2x+5} \\
+        & y           &&=\ \frac{4x+3}{2x+5} \ \text{(by definition of f)} \\
+        & 2xy +5y     &&=\ 4x + 3 \\
+        & 5y - 3      &&=\ 4x-2xy \\
+        & 5y - 3      &&=\ x(4-2y) \\
+        & \frac{5y - 3}{4-2y} &&=\ x \\
+        & f'(x) &&=\ \frac{5x - 3}{4-2x}
+    \end{alignat*}
+
+    \question[4]{}
+
+    There are 17 total children and there are 7 days in a week. Considering there are more children than there are days in a week, and since $\lfloor 17/7 \rfloor = 2$, we can say that at least three of them were born on the same day of the week.
     
 \end{document}
