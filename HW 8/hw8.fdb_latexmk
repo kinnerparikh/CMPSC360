@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1647682241 "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.tex" "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.pdf" "hw8" 1647682243
-  "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.aux" 1647682242 32 4d1825978335c8847f72f7c473f9edc8 ""
-  "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.tex" 1647682241 11154 6c59cbaa5a4921c26f5e8014db24337f ""
+["pdflatex"] 1647713992 "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.tex" "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.pdf" "hw8" 1647713997
+  "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.aux" 1647713992 32 f852561997c05a7d986acd1deeb530ec ""
+  "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.tex" 1647713991 12053 8109fce8be822f982a19bf52b1998582 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -68,11 +68,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "hw8.aux" 1647682242 32 4d1825978335c8847f72f7c473f9edc8 "pdflatex"
-  "hw8.tex" 1647682241 11154 6c59cbaa5a4921c26f5e8014db24337f ""
+  "hw8.aux" 1647713992 32 f852561997c05a7d986acd1deeb530ec "pdflatex"
+  "hw8.tex" 1647713991 12053 8109fce8be822f982a19bf52b1998582 ""
   (generated)
-  "hw8.pdf"
   "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.pdf"
-  "hw8.log"
   "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.log"
+  "hw8.pdf"
+  "hw8.log"
   "hw8.aux"
