@@ -359,6 +359,7 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 OUTPUT /Users/kinner/Documents/School/CMPSC360/HW 8/hw8.pdf
 INPUT /usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /Users/kinner/Documents/School/CMPSC360/HW 8/hw8.aux
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
@@ -372,5 +373,6 @@ INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

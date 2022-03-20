@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1647713992 "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.tex" "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.pdf" "hw8" 1647713997
-  "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.aux" 1647713992 32 f852561997c05a7d986acd1deeb530ec ""
-  "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.tex" 1647713991 12053 8109fce8be822f982a19bf52b1998582 ""
+["pdflatex"] 1647813667 "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.tex" "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.pdf" "hw8" 1647813667
+  "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.aux" 1647813667 33 06c322e1d88c4778ac780ba5e7d05c77 ""
+  "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.tex" 1647813667 15656 b3487c5fe6042046a22f6e142799c7bc ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -14,6 +14,7 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
@@ -26,6 +27,7 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -68,11 +70,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "hw8.aux" 1647713992 32 f852561997c05a7d986acd1deeb530ec "pdflatex"
-  "hw8.tex" 1647713991 12053 8109fce8be822f982a19bf52b1998582 ""
+  "hw8.aux" 1647813667 33 06c322e1d88c4778ac780ba5e7d05c77 "pdflatex"
+  "hw8.tex" 1647813667 15656 b3487c5fe6042046a22f6e142799c7bc ""
   (generated)
-  "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.pdf"
   "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.log"
   "hw8.pdf"
   "hw8.log"
+  "/Users/kinner/Documents/School/CMPSC360/HW 8/hw8.pdf"
   "hw8.aux"

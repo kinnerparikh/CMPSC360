@@ -12,7 +12,7 @@
 % https://www.messletters.com/en/big-text/
 
 \newcommand{\question}[2][]{\begin{flushleft}
-        \textbf{Question #1}: \text{#2}
+        \textbf{Question #1}: #2
 
 \end{flushleft}}
 
@@ -74,7 +74,7 @@
         &= 3t && \text{such that $t \in \mathbb{N}$ where $t = 4q + 1$}
     \end{alignat*}
 
-    Therefore, by definition of divides, $\forall n \in \mathbb{N}, 3 \mid 2^{2n} - 1$.
+    Therefore, by definition of divides, $\forall n \in \mathbb{N}, 3 \mid 2^{2n} - 1$. $\square$
 
     \newpage
 
@@ -192,7 +192,7 @@
     To show this, let's explore the left hand side of the equations:
     \begin{alignat*}{2}
         \sum _{i = 0}^{k + 1}a^i &= \sum _{i = 0}^{k}a^i + a^{k + 1} \\
-        &= \frac{a^{k+1} - 1}{a - 1} + a^{k + 1} &&\text{[injective hypothesis]}\\
+        &= \frac{a^{k+1} - 1}{a - 1} + a^{k + 1} &&\text{[inductive hypothesis]}\\
         &= \frac{a^{k+1} - 1 + a^{k + 1} \cdot (a - 1)}{a - 1} \\
         &= \frac{a^{k+1} - 1 + a^{k + 2} - a^{k + 1}}{a - 1} \\
         &= \frac{a^{k+2} - 1}{a - 1} &&\text{[subtraction]}\\
@@ -345,7 +345,7 @@
 
     for all natural numbers $i$ from $1$ to $k$.
 
-    \textbf{Inductive Step} $(n = k + 2)$:
+    \textbf{Inductive Step} $(n = k + 1)$:
 
     We need to show that $a_{k} + 2a_{k - 1} = 3 \cdot 2^{k} + 2(-1)^{k + 1}$
 
@@ -362,7 +362,109 @@
     
     $a_1 = 1, a_2 = 8, n \geq 3$
 
-    \question[8]{}
+    \newpage
 
+    \question[8]{Use strong induction to show that every positive integer $n$ can be written as a sum
+    of distinct powers of two, that is, as a sum of a subset of the integers $2^0 = 1, 2^1 = 2, 2^2 = 4, ...$}
+
+    Proof:
+
+    We proceed by strong induction on $n$.
+
+    Let $P(n)$ be the proposition that $n$ can be written as a sum of distinct powers of two.
+
+    We will prove $P(n)$ for all $n \in \mathbb{Z}^+$.
+
+    \textbf{Base Case} $(n = 1)$:
+
+    $P(1)$ holds the property of the statement because $2^0 = 1$.
+
+    The base case is proved.
+
+    \textbf{Inductive Hypothesis} $(n = k)$:
+
+    Suppose $k$ is an arbitrary integer greater than 0. Assume that $P(i)$ is true for all $1 \leq i \leq k$ 
+    
+    for some integer $k$.
+
+    \textbf{Inductive Step} $(n = k + 1)$:
+
+    We have to show that $P(k + 1)$ is even or odd.
+
+    \textit{Case 1:} $k + 1$ is even.
+
+    \tabto{1cm} Since it is even, we can say that $\frac{k + 1}{2}$ is an integer. 
+
+    \tabto{1cm} We know that $1 \leq \frac{k + 1}{2} \leq k$ 
+
+    \tabto{1cm} Based on this, from the inductive hypothesis, we can say that $P(\frac{k + 1}{2})$ is true.
+
+    \tabto{1cm} So this means that $k + 1$ can be written as $2 \cdot \frac{k + 1}{2}$.
+
+    \tabto{1cm} Since we know that $P(\frac{k + 1}{2})$ can be written as a sum of distinct powers of two, we can say 
+    
+    \tabto{1cm} that all the powers of two in $2 \cdot \frac{k + 1}{2}$ are distinct too.
+
+    \textit{Case 2:} $k + 1$ is odd.
+    
+    \tabto{1cm} When $k + 1$ is odd, we know that $k$ is even.
+
+    \tabto{1cm} From the inductive hypothesis, we know that $P(k)$ holds.
+
+    \tabto{1cm} Since $k$ is even, the sum cannot include 1, or $2^0$.
+
+    \tabto{1cm} Thus, $k + 1$ can be written as $P(k + 1) = 2^0 + P(k)$.
+
+    \tabto{1cm} So we can say that $P(k + 1)$ can be written as a sum of distinct powers of two.
+
+    Therefore, $P(k + 1)$ is true for all positive integers. $\square$
+
+    \newpage
+
+    \question[9]{Assume we know that for each natural number $n > 1$, there is a prime number $p$ 
+    such that $n < p < 2n$. We call such a prime number a pseudo-prime number. Prove that every 
+    natural number $n > 2$ can be written as the summation of distinct pseudo-prime numbers.}
+
+    Proof:
+
+    We proceed by strong induction on $n$.
+
+    Let $P(n)$ be the proposition that $n$ can be written as a sum of distinct pseudo-prime numbers.
+
+    Let $Q(n) = t$ such that $n < t < 2n$ where $k \in \mathbb{N}, k \neq 1, k \neq n,$ and $k \nmid n$ 
+
+    We will prove $P(n)$ for all $n \in \mathbb{N}, n \geq 3$.
+
+    \textbf{Base Case} $(n = 3)$:
+
+    We know that $Q(2) = 3$.
+
+    This means that $P(3)$ holds because $3 = Q(2)$, which means 3 can be written as a sum of distinct 
+    
+    pseudo-prime numbers. The base case is proved.
+
+    \textbf{Inductive Hypothesis} $(n = k)$:
+
+    For any integer $k \geq 3$ assume that all natural numbers from 3 through $k$ can be written as a 
+    
+    sum of distinct prime numbers. 
+
+    This means, we assume that any integer $k \geq 3$, $P(i)$ is true for all natural numbers $3 \leq i \leq k$.
+
+    \textbf{Inductive Step} $(n = k + 1)$:
+
+    We need to show that $P(k + 1)$ is true. That means $k + 1$ can be written as a sum of distinct 
+    
+    pseudo-prime numbers.
+
+    There are two cases: $k + 1$ is a prime itself, or $k + 1$ is a composite number.
+
+    \textit{Case 1:} $k + 1$ is a prime number.
+
+    \tabto{1cm} When $k + 1$ is a prime number, then $P(k + 1)$ will be true.
+
+    \textit{Case 2:} $k + 1$ is a composite number.
+
+    \tabto{1cm} If $k + 1$ is a composite number, that means 
 
 \end{document}
