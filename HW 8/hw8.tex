@@ -263,7 +263,7 @@
 
     For $n = 1$, we know that $P(1) = 1$, and $F_3 - 1 = (1 + 1) - 1 = 1$. Therefore, $P(1)$ is proved
 
-    For $n = 2$, we calculate that $P(2) = 2$, and $F_4 - 1 = (2 + 1) - 1 = 2$. Therefore, $P(1)$ is proved
+    For $n = 2$, we calculate that $P(2) = 2$, and $F_4 - 1 = (2 + 1) - 1 = 2$. Therefore, $P(2)$ is proved
 
     \textbf{Inductive Hypothesis} $(n = k)$:
 
@@ -360,7 +360,7 @@
 
     Therefore, it is true that $a_n = 3 \cdot 2^{n - 1} + 2(-1)^n$ for all $n \in \mathbb{N}$ where $a_n = a_{n - 1} + 2a_{n-2},$
     
-    $a_1 = 1, a_2 = 8, n \geq 3$
+    $a_1 = 1, a_2 = 8, n \geq 3$. $\square$
 
     \newpage
 
@@ -431,7 +431,7 @@
 
     Let $P(n)$ be the proposition that $n$ can be written as a sum of distinct pseudo-prime numbers.
 
-    Let $Q(n) = t$ such that $n < t < 2n$ where $k \in \mathbb{N}, k \neq 1, k \neq n,$ and $k \nmid n$ 
+    Let $Q(n) = t$ such that $n < t < 2n$ where $t \in \mathbb{N}, t \neq 1, t \neq n,$ and $t \nmid n$ 
 
     We will prove $P(n)$ for all $n \in \mathbb{N}, n \geq 3$.
 
@@ -465,6 +465,14 @@
 
     \textit{Case 2:} $k + 1$ is a composite number.
 
-    \tabto{1cm} If $k + 1$ is a composite number, that means 
+    \tabto{1cm} We can say that $Q(\lfloor \frac{k + 1}{2} \rfloor)$ is less than $k + 1$
+
+    \tabto{1cm} So, $k + 1 - Q(\lfloor \frac{k + 1}{2} \rfloor) < k$
+    
+    \tabto{1cm} From the inductive hypothesis we know that $P(k + 1 - Q(\lfloor \frac{k + 1}{2} \rfloor))$ holds true
+
+    \tabto{1cm} Since $Q(\lfloor \frac{k + 1}{2} \rfloor)$ cannot exist in $P(k + 1 - Q(\lfloor \frac{k + 1}{2} \rfloor))$, we know that all primes are distinct.
+    
+    Therefore, we know that $P(k + 1)$ is true.
 
 \end{document}
