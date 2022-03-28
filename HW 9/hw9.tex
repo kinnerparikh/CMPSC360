@@ -1,0 +1,111 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+
+% https://www.messletters.com/en/big-text/
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: #2
+
+\end{flushleft}}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 360} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{15pt}
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[9]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+    
+    \question[1]{Show that if $x$ is an odd integer, then $x^2$ has the form $8k + 1$, for some $k \in \mathbb{Z}$}
+
+    \question[2]{Solve for $23 ^ 3 (\text{mod } 30)$}
+
+    \question[3]{Show that if an integer $n$ is not divisible by 3, then $n^2 - 1$ is always divisible by 3. 
+    Similarly, show that if an integer $n$ is not divisible by 3, then $n^3 - 1 \equiv 0$}
+
+    \question[4]{Find GCD of 2947 and 3997 using Euclidean Theorem.}
+    \begin{alignat*}{5}
+        &3997\ &=\ &2947(1) &&+ 1050\\
+        &2947  &=\ &1050(2) &&+ 847\\
+        &1050  &=\ &847(1)  &&+ 203\\
+        &847   &=\ &203(4)  &&+ 35\\
+        &203   &=\ &35(5)   &&+ 28\\
+        &35    &=\ &28(1)   &&+ 7\\
+        &28    &=\ &7(4)    &&+ 0
+    \end{alignat*}
+
+    So, $gcd(2947, 3997) = 7$
+
+    \question[5]{Express $gcd(128469, 12818)$ as a linear combination of 128469 and 12818 using 
+    extended Euclid algorithm.}
+
+    Applying Euclid's algorithm:
+    \begin{alignat*}{5}
+        &128469\ &=\ &12818(10) &&+ 289\\
+        &12818   &=\ &289  (44) &&+ 102\\
+        &289     &=\ &102  (2) &&+   85\\
+        &102     &=\ &85   (1) &&+   17\\
+        &85      &=\ &17   (5) &&+    0
+    \end{alignat*}
+
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        $i$ & $r_i$ & $r_{i + 1}$ & $q_{i + 1}$ & $r_{i + 2}$ & $s_i$ & $t_i$\\\hline
+        0 & 128469 & 12818 & 10 & 289 & 1 & 0\\
+        1 & 12818  & 289   & 44 & 102 & 0 & 1\\
+        2 & 289    & 102   & 2  &  85 & 1 & -10\\
+        3 & 102    & 85    & 1  &  17 & -44 & 441\\
+        4 & 85     & 17    & 5  &   0 & 90 & -891\\
+        5 &        &       &    &     & -224 & 2223 \\\hline 
+    \end{tabular} 
+    -224 * 128469 + 2223 * 12818
+
+    \question[6]{Prove that if $a \mid bc$ with $gcd(a, b) = 1$, then $a \mid c$}
+
+    \question[7]{Prove that $gcd(a^2,b^2)=gcd(a,b)^2$ using Bezout's identity.}
+
+    \question[8]{For $Z_{11}$, find out:}
+    
+    a) $3 \oplus 7$
+
+    b) $3 \otimes 7$
+
+    c) $10 \ominus 7$
+
+    d) $10 \oslash 7$
+
+    \question[9]{Determine whether every element $a$ of $Z_n$ has an inverse for $n = 5, 6$ and $ 7, 11$}
+
+    \question[10]{Write the following decimal string $334_{10}$ to senary (base 6) showing work}
+    \begin{alignat*}{2}
+        334 \div 6 &= 55\ &&R\ 4\\
+        55 \div 6 &= 9 &&R\ 1\\
+        9 \div 6 &= 1 &&R\ 3\\
+        1 \div 6 &= 0 &&R\ 1
+    \end{alignat*}
+
+    So $334_{10} = 1314_6$.
+
+
+\end{document}
