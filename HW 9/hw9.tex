@@ -39,10 +39,96 @@
     
     \question[1]{Show that if $x$ is an odd integer, then $x^2$ has the form $8k + 1$, for some $k \in \mathbb{Z}$}
 
+    Proof:
+
+    Assume that $x$ is an odd integer.
+
+    By definition of odd, $x = 2t + 1$ where $t \in \mathbb{Z}$.
+
+    This also means that $x = 4t + 1$ and $x = 4t + 3$.
+
+    \textbf{Case 1:} $(x = 4t + 1)$
+    
+    \tabto{1cm} $x^2 = (4t + 1)^2$
+         
+    \tabto{1.45cm} $= 16t^2 + 8t + 1$
+
+    \tabto{1.45cm} $= 8(2t^2 + t) + 1$
+
+    \tabto{1.45cm} $= 8k + 1$ such that $k \in \mathbb{Z}$ where $k = 2t^2 + t$
+
+    \tabto{1cm} So we know  when $x = 4t + 1$, that $x^2$ has the form $8k + 1$
+
+    \textbf{Case 2:} $(x = 4t + 3)$
+
+    \tabto{1cm} $x^2 = (4t + 3)^2$
+         
+    \tabto{1.45cm} $= 16t^2 + 24t + 9$
+    
+    \tabto{1.45cm} $= 16t^2 + 24t + 8 + 1$
+
+    \tabto{1.45cm} $= 8(2t^2 + 3t + 1) + 1$
+
+    \tabto{1.45cm} $= 8k + 1$ such that $k \in \mathbb{Z}$ where $k = 2t^2 + 3t + 1$
+    
+    \tabto{1cm} So we know when $x = 4t + 3$, that $x^2$ has the form $8k + 1$
+
+    Both cases hold true. Therefore, when $x$ is an odd integer, then $x^2$ has the form $8k + 1$. $\square$
+
     \question[2]{Solve for $23 ^ 3 (\text{mod } 30)$}
 
+    $23 ^ 3 (\text{mod } 30) = 23^{1 + 2} (\text{mod } 30)$
+
+    \tabto{2.55cm} $= ((23^1 \text{ mod } 30)(23^2 \text{ mod } 30))\text{ mod } 30$
+
+    \tabto{2.55cm} $= (23 \cdot 19) \text{ mod } 30$
+
+    \tabto{2.55cm} $= 437 \text{ mod } 30$
+
+    \tabto{2.55cm} $= 17$
+
+    \newpage
+
     \question[3]{Show that if an integer $n$ is not divisible by 3, then $n^2 - 1$ is always divisible by 3. 
-    Similarly, show that if an integer $n$ is not divisible by 3, then $n^3 - 1 \equiv 0$}
+    Similarly, show that if an integer $n$ is not divisible by 3, then $n^2 - 1 \equiv 0$}
+
+    Proof:
+
+    Assume that $3 \nmid n$ such that $n \in \mathbb{Z}$
+
+    We need to prove that $3 \mid (n^2 - 1)$ and $n^2 - 1 \equiv 0$, which means $n^2 = 1 (\text{mod } 3)$
+
+    This means that $n = 3x + 1$ or $n = 3x + 2$ such that $x \in \mathbb{Z}$
+
+    \textbf{Case 1:} $(n = 3x + 1)$
+
+    \tabto{1cm} $n^2 - 1 = (3x + 1)^2 - 1$
+
+    \tabto{2.07cm} $= 9x^2 + 6x + 1 - 1$
+
+    \tabto{2.07cm} $= 9x^2 + 6x$
+
+    \tabto{2.07cm} $= 3(3x^2 + 2x)$
+
+    \tabto{2.07cm} $= 3t$ where $t \in \mathbb{Z}$ and $t = 3x^2 + 2x$
+
+    \tabto{1cm} By definition of divides, when $n = 3x + 1$, then $3 \mid (n^2 + 1)$.
+
+    \textbf{Case 2:} $(n = 3x + 2)$
+
+    \tabto{1cm} $n^2 - 1 = (3x + 2)^2 - 1$
+
+    \tabto{2.07cm} $= 9x^2 + 12x + 4 - 1$
+
+    \tabto{2.07cm} $= 9x^2 + 12x + 3$
+
+    \tabto{2.07cm} $= 3(3x^2 + 4x + 1)$
+
+    \tabto{2.07cm} $= 3t$ where $t \in \mathbb{Z}$ and $t = 3x^2 + 4x + 1$
+
+    \tabto{1cm} By definition of divides, when $n = 3x + 2$, then $3 \mid (n^2 + 1)$.
+
+    Since both cases hold, we know that if $3 \nmid n$ such that $n \in \mathbb{Z}$, then $3 \mid (n^2 - 1)$. $\square$
 
     \question[4]{Find GCD of 2947 and 3997 using Euclidean Theorem.}
     \begin{alignat*}{5}
@@ -61,27 +147,37 @@
     extended Euclid algorithm.}
 
     Applying Euclid's algorithm:
-    \begin{alignat*}{5}
-        &128469\ &=\ &12818(10) &&+ 289\\
-        &12818   &=\ &289  (44) &&+ 102\\
-        &289     &=\ &102  (2) &&+   85\\
-        &102     &=\ &85   (1) &&+   17\\
-        &85      &=\ &17   (5) &&+    0
-    \end{alignat*}
-
     \begin{tabular}{|c|c|c|c|c|c|c|}
         \hline
         $i$ & $r_i$ & $r_{i + 1}$ & $q_{i + 1}$ & $r_{i + 2}$ & $s_i$ & $t_i$\\\hline
-        0 & 128469 & 12818 & 10 & 289 & 1 & 0\\
-        1 & 12818  & 289   & 44 & 102 & 0 & 1\\
-        2 & 289    & 102   & 2  &  85 & 1 & -10\\
-        3 & 102    & 85    & 1  &  17 & -44 & 441\\
-        4 & 85     & 17    & 5  &   0 & 90 & -891\\
-        5 &        &       &    &     & -224 & 2223 \\\hline 
-    \end{tabular} 
-    -224 * 128469 + 2223 * 12818
+        0 & 128469 & 12818 & 10 & 289 & 1    & 0    \\
+        1 & 12818  & 289   & 44 & 102 & 0    & 1    \\
+        2 & 289    & 102   & 2  &  85 & 1    & -10  \\
+        3 & 102    & 85    & 1  &  17 & -44  & 441  \\
+        4 & 85     & 17    & 5  &   0 & 89   & -892 \\
+        5 &        &       &    &     & -133 & 1333 \\\hline 
+    \end{tabular}
+    \vspace*{0.1cm}
+
+    $gcd(128469, 12818) = (-133)(128469) + (1333)(12818)$
 
     \question[6]{Prove that if $a \mid bc$ with $gcd(a, b) = 1$, then $a \mid c$}
+
+    Proof:
+
+    Assume that $a \mid bc$ and $gcd(a, b) = 1$
+
+    By definition of divides, we know that $bc = at$ where $t \in \mathbb{Z}$
+
+    Dividing both sides by $b$, we get $c = \frac{at}{b}$
+
+    Since we know that $gcd(a, b) = 1$, it must mean that $t \mid b$.
+
+    Therefore, we can say that $\frac{t}{b} \in \mathbb{Z}$
+
+    This means that $c = ax$ where $x = \frac{t}{b}$ 
+
+    Thus, by the definition of divides, we can say that $a \mid c$. $\square$
 
     \question[7]{Prove that $gcd(a^2,b^2)=gcd(a,b)^2$ using Bezout's identity.}
 
@@ -89,23 +185,43 @@
     
     a) $3 \oplus 7$
 
+    \tabto{0.9cm}$(3 + 7)\text{ mod } 11 = 10 \text{ mod } 11 = 10$
+
     b) $3 \otimes 7$
+
+    \tabto{0.9cm}$(3 \cdot 7)\text{ mod } 11 = 21 \text{ mod } 11 = 10$
 
     c) $10 \ominus 7$
 
+    \tabto{0.9cm}$(10 - 7)\text{ mod } 11 = 3 \text{ mod } 11 = 3$
+
     d) $10 \oslash 7$
+    
+    \tabto{0.95cm}$10 \otimes 7^{-1}= 10 \otimes 4 = (10 \cdot 4)\text{ mod } 11 = 40 \text{ mod } 11 = 7$
 
     \question[9]{Determine whether every element $a$ of $Z_n$ has an inverse for $n = 5, 6$ and $ 7, 11$}
 
     \question[10]{Write the following decimal string $334_{10}$ to senary (base 6) showing work}
     \begin{alignat*}{2}
         334 \div 6 &= 55\ &&R\ 4\\
-        55 \div 6 &= 9 &&R\ 1\\
-        9 \div 6 &= 1 &&R\ 3\\
-        1 \div 6 &= 0 &&R\ 1
+        55  \div 6 &= 9   &&R\ 1\\
+        9   \div 6 &= 1   &&R\ 3\\
+        1   \div 6 &= 0   &&R\ 1
     \end{alignat*}
 
     So $334_{10} = 1314_6$.
 
+    \question[11]{Find the GCD of 846 and 265.}
 
+    1) 846 = $(q_1 = 3) * 265 + (r_1 = 51)$
+
+    2) 265 = $(q_2 = 5) * r_1 + (r_2 = 10)$
+
+    3) $r_1 = (q_3 = 5) * r_2 + (r_3 = 1)$
+
+    4) $r_2 = (q_4 = 10) * r_3 + 0$
+
+    $r_3$ is our gcd.
+
+    
 \end{document}
