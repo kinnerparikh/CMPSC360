@@ -181,25 +181,72 @@
 
     \question[7]{Prove that $gcd(a^2,b^2)=gcd(a,b)^2$ using Bezout's identity.}
 
+    Proof:
+
+    Bezout's identity states that $gcd(a, b) = as + bt = x$ for some $s, t, x \in \mathbb{Z}$.
+
+    Considering $x$:
+    \begin{alignat*}{1}
+        x^3 &= (as + bt)^3\\
+        &= \left(as\right)^3+3\left(as\right)^2bt+3as\left(bt\right)^2+\left(bt\right)^3\\
+        &= a^2(as^3 + 3s^2bt) + b^2(3ast^2 + bt^3)\\
+        x^2 &= a^2\left(\frac{as^3 + 3s^2bt}{x}\right) + b^2\left(\frac{3ast^2 + bt^3}{x}\right) \text{[divide by $x$]}\\
+        &= a^2\left(\frac{a}{x} \cdot s^3+3s^2 \cdot \frac{b}{x}\cdot t\right)+b^2\left(\frac{3a}{x} \cdot st^2+\frac{b}{x}\cdot t^3\right)
+    \end{alignat*}
+
+    By definition of $gcd(a, b) = x$, we know that $x \mid a$ and $x \mid b$.
+
+    So we know that $\frac{a}{x}, \frac{b}{x} \in \mathbb{Z}$
+
+    Let $\frac{a}{x}, \frac{b}{x} = y_0, y_1$ respectively, where $y_0, y_1 \in \mathbb{Z}$
+
+    Rewriting the equation, we can say that 
+    \begin{alignat*}{1}
+        x^2 &= a^2\left(y_0  s^3+3s^2  y_1 t\right)+b^2\left(3y_0st^2+y_1 t^3\right)\\
+        &= a^2 \cdot n + b^2 \cdot m \text{ for some } n, m \in \mathbb{Z} \text{ such that } n = y_0  s^3+3s^2  y_1 t, m = 3y_0st^2+y_1 t^3
+    \end{alignat*}
+
+    By definition of $gcd$, we know that $gcd(a^2, b^2) = a^2s_0 + b^2t_0$ for some $s_0, t_0 \in \mathbb{Z}$
+
+    So we can see that $x^2$ follows the form of $gcd(a^2, b^2)$
+
+    This means that $a^2s_0 + b^2t_0 = a^2 n + b^2 m$
+
+    And by substitution, we know that $gcd(a^2, b^2) = gcd(a, b)^2$
+
+    Therefore, we can conclude that $gcd(a^2,b^2)=gcd(a,b)^2$. $\square$ 
+
+    \newpage
+
     \question[8]{For $Z_{11}$, find out:}
     
     a) $3 \oplus 7$
 
-    \tabto{0.9cm}$(3 + 7)\text{ mod } 11 = 10 \text{ mod } 11 = 10$
+    \tabto{0.9cm}$(3 + 7)\text{ mod } 11 = 10 \text{ mod } 11 =$ \hl{10}
 
     b) $3 \otimes 7$
 
-    \tabto{0.9cm}$(3 \cdot 7)\text{ mod } 11 = 21 \text{ mod } 11 = 10$
+    \tabto{0.9cm}$(3 \cdot 7)\text{ mod } 11 = 21 \text{ mod } 11 =$\hl{10}
 
     c) $10 \ominus 7$
 
-    \tabto{0.9cm}$(10 - 7)\text{ mod } 11 = 3 \text{ mod } 11 = 3$
+    \tabto{0.9cm}$(10 - 7)\text{ mod } 11 = 3 \text{ mod } 11 = $ \hl{3}
 
     d) $10 \oslash 7$
     
-    \tabto{0.95cm}$10 \otimes 7^{-1}= 10 \otimes 4 = (10 \cdot 4)\text{ mod } 11 = 40 \text{ mod } 11 = 7$
+    \tabto{0.95cm} $10 \otimes 7^{-1}= 10 \otimes 8 = (10 \cdot 8)\text{ mod } 11 = 80 \text{ mod } 11 =$ \hl{3}
 
-    \question[9]{Determine whether every element $a$ of $Z_n$ has an inverse for $n = 5, 6$ and $ 7, 11$}
+    \tabto{0.95cm} By definition, $7 \cdot x \text{ mod } 11 = 1$ where $x = 7^{-1}$. So $7^{-1} = 8$
+
+    \question[9]{Determine whether every element $a$ of $\mathbb{Z}_n$ has an inverse for $n = 5, 6$ and $ 7, 11$}
+
+    By definition of an inverse, a number $a \in \mathbb{Z}_n$ has an inverse when $a$ and $n$ are coprimes. This 
+    
+    means that $a$ is invertible when $gcd(a, n) = 1$. In the case of $n = 5, 7, 11$, since they are all 
+    
+    primes, all $a \in \mathbb{Z}_n$ will be coprime with $n$. However, for the case of $n = 6$, not every element 
+    
+    will have an inverse because 2 and 3 are not coprime with 6.
 
     \question[10]{Write the following decimal string $334_{10}$ to senary (base 6) showing work}
     \begin{alignat*}{2}
@@ -223,5 +270,21 @@
 
     $r_3$ is our gcd.
 
+    GCD(846, 265) = 1
+
+    We have to find the Bezout coefficients a,b such that a*846 + b*265 = GCD(846, 265). For 
     
+    doing this we start backward substitution. So we can write the above steps as:
+
+    1) $r_1 = 846 - q_1*265$ 
+
+    2) $r_2 = 265 - q_2*r_1$
+
+    3) $r_3 = r_1 - q_3*r_2$
+
+    We start from 3 as $r_3$ is our $gcd$ and keep on substituting the values of $r_1,r_2$ and $r_3$ as above. 
+
+    $r_3 = r_1 - q_3*r_2$
+
+    = $ $
 \end{document}
