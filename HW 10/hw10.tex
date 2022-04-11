@@ -124,6 +124,32 @@
 
     \question[4]{Using Fermat's Little Theorem find $3^{2003}$ mod 455}
 
+    Since $3^{12} \equiv 1$ mod 455, we know that $3^{12^k} \equiv 1$ mod 455
+
+    So, $2003 = 12 \cdot 166 + 11$
+
+    Thus, $3^{2003} = 3^{12 \cdot 166 + 11}$
+
+    $3^{12 \cdot 166 + 11} = (3^{12})^{166} \cdot 3^{11}$ mod 455
+
+    \tabto{2.1cm} = $1^{166} \cdot 3^{11}$ mod 455
+
+    \tabto{2.1cm} = $3^{11}$ mod 455 
+    
+    So $3^{11}$ mod 455 = $3^1 \cdot 3^2 \cdot 3^8$ mod 455
+
+    $3^1$ mod 455 = 3
+    
+    $3^2$ mod 455 = 9
+
+    $3^4$ mod 455 = $9^2$ mod 455 = 81
+
+    $3^8$ mod 455 = $81^2$ mod 455 = 191
+
+    $3 \cdot 9 \cdot 191$ mod 455 = 5157 mod 455 = 152
+
+    So, $2^{2003}$ mod 455 = 152
+
     \question[5]{}
 
     TIME FOR FUN
@@ -258,6 +284,12 @@
     And 293 mod 105 = 83
 
     Thus, the lowest possible simultaneous solution is $x = 83$
+
+    \newpage
+
+    \question[9]{}
+
+    
     
     
 \end{document}
