@@ -206,9 +206,58 @@
     \question[8]{}
 
     $2x \equiv 5$(mod 7)
+    
+    Applying the backwards pass of Euclid division, we know that 2 inverse of mod 7 is 4.
+
+    Multiplying both sides of congruence:
+
+    $2(4)x \equiv 5(4)$(mod 7)
+
+    $x \equiv 20$(mod 7); Since $2 \cdot 4 \equiv 1$(mod 7)
+
+    So, $x \equiv 6$(mod 7)
+
+    \vspace{0.2cm}
 
     $4x \equiv 2$(mod 6)
 
+    Dividing congruence by 2, we get $2x \equiv 1$(mod 3)
+
+    Applying the backwards pass of Euclid division, we know that 2 inverse of mod 3 is 2.
+
+    $2(2)x \equiv 1(2)$(mod 3)
+
+    $x \equiv 2$(mod 3); Since $2 \cdot 2 \equiv 1$(mod 3)
+
+    So, $x \equiv 2$(mod 3)
+
+    \vspace{0.2cm}
+    
+    $x \equiv 2$(mod 3)
+    
     $x \equiv 3$(mod 5)
+    
+    $x \equiv 6$(mod 7)
+
+    Applying the Chinese Remainder Theorem:
+
+    $a_1 = 2, a_2 = 3, a_3 = 6$ and $m_1 = 3, m_2 = 5, m_3 = 7$
+
+    So, $M = 3 \cdot 5 \cdot 7 = 105$
+
+    Thus, $z_1 = 35, z_2 = 21, z_3 = 15$
+
+    $y_1 \cdot 35 = 1$ mod 3; so $y_1 = 2$
+
+    $y_2 \cdot 21 = 1$ mod 5; so $y_2 = 1$
+
+    $y_3 \cdot 15 = 1$ mod 7; so $y_3 = 1$
+
+    We get $x = (2 \cdot 35 \cdot 2) + (3 \cdot 21 \cdot 1) + (6 \cdot 15 \cdot 1) = 293$
+
+    And 293 mod 105 = 83
+
+    Thus, the lowest possible simultaneous solution is $x = 83$
+    
     
 \end{document}
