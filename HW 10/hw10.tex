@@ -110,7 +110,17 @@
 
     So, $x = 88 + 89k$ where $k \in \mathbb{Z}$ satisfies the congruence form: $55x = 34$ (mod 89)
 
+    \newpage
+
     \question[3]{}
+
+    $z_2 = 105 / 7 = 15$
+
+    $y_2 \cdot 15 = 1 \text{ mod } 7 \rightarrow y_2 = 1$ 
+
+    $(7 \cdot 11 \cdot 7) + (4 \cdot 10 \cdot 15) + (6 \cdot 9 \cdot 9) = 1625$
+
+    $x = 1625 \text{ mod } 105 = 50$
 
     \question[4]{Using Fermat's Little Theorem find $3^{2003}$ mod 455}
 
@@ -121,8 +131,77 @@
     \question[6]{We chose two prime numbers $p = 17$, $q = 11$, and $e = 7$. Calculate $d$ and show the 
     public and private keys.}
 
+    $n = pq = 17 \cdot 11 = 187$
+    
+    $k = (p-1)(q-1) = 16 \cdot 10 = 160$
+
+    $de \equiv 1 (\text{mod } 160)$, so $d \cdot 7 \equiv 1 (\text{mod } 160)$
+    \begin{alignat*}{1}
+        160 &= 7 \cdot 22 + 6\\
+        7 &= 6 \cdot 1 + 1\\
+        6 &= 1 \cdot 6\\
+        \\
+        1 &= 7 - 6\\
+        &= 7 - (160 - 7 \cdot 22)\\
+        &= -160 + 7 \cdot 23\\
+    \end{alignat*}
+
+    So, we know that $d = 23$
+
+    The public key is: (187, 7)
+
+    The private key is: (187, 23)
+
+    \newpage
+
     \question[7]{Given $p = 37$ and $q = 43$, can we choose $d = 71$? If yes, justify your answer, 
     otherwise suggest one value for $d$. Then compute the public and the private keys.}
+
+    $n = pq = 37 \cdot 43 = 1591$
+
+    $k = (p-1)(q-1) = 36 \cdot 42 = 1512$
+
+    Finding the inverse of 71 mod 1512:
+    \begin{alignat*}{1}
+        1512 &= 71 \cdot 21 + 21\\
+        71   &= 21 \cdot 3 + 8\\
+        21   &= 8 \cdot 2 + 5\\
+        8    &= 5 \cdot 1 + 3\\
+        5    &= 3 \cdot 1 + 2\\
+        3    &= 2 \cdot 1 + 1\\
+        2    &= 1 \cdot 2\\
+        \\
+        1 &= 3 - 2\\
+          &= 3 - (5 - 3)\\
+          &= -5 + 3 \cdot 2\\
+          &= -5 + (8 - 5) \cdot 2\\
+          &= 8 \cdot 2 + 5 \cdot (-3)\\
+          &= 8 \cdot 2 + (21 - 8 \cdot 2) \cdot (-3)\\
+          &= 21 \cdot (-3) + 8 \cdot 8\\
+          &= 21 \cdot (-3) + (71 - 21 \cdot 3) \cdot 8\\
+          &= 71 \cdot 8 + 21 \cdot (-27)\\
+          &= 71 \cdot 8 + (1512 - 71 \cdot 21) \cdot (-27)\\
+          &= 1512 \cdot (-27) + 71 \cdot 575
+    \end{alignat*}
+
+    The inverse of 71 mod 1512 is 575. So $e = 575$ 
+
+    We must calculate gcd(575, 1512)
+    \begin{alignat*}{1}
+        1512 &= 575 \cdot 2 + 362\\
+        575 &= 362 \cdot 1 + 213\\
+        362 &= 213 \cdot 1 + 149\\
+        213 &= 149 \cdot 1 + 64\\
+        149 &= 64 \cdot 2 + 21\\
+        64 &= 21 \cdot 3 + 1\\
+        21 &= 1 \cdot 21
+    \end{alignat*}
+
+    So gcd(575, 1512) = 1, which means we can choose $d = 71$
+
+    Public key: (1591, 575)
+
+    Private key: (1591, 71)
 
     \question[8]{}
 
