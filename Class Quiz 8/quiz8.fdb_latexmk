@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1649707301 "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.tex" "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.pdf" "hw10" 1649707302
-  "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.aux" 1649707302 32 4d1825978335c8847f72f7c473f9edc8 ""
-  "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.tex" 1649707301 9674 e38950ff5cdd57f281cd63ecd7b852f3 ""
+["pdflatex"] 1649892757 "/Users/kinner/Documents/School/CMPSC360/Class Quiz 8/quiz8.tex" "/Users/kinner/Documents/School/CMPSC360/Class Quiz 8/quiz8.pdf" "quiz8" 1649892757
+  "/Users/kinner/Documents/School/CMPSC360/Class Quiz 8/quiz8.aux" 1649892757 32 3985256e7290058c681f74d7a3565a19 ""
+  "/Users/kinner/Documents/School/CMPSC360/Class Quiz 8/quiz8.tex" 1649892757 2592 c639a60eea718ca3998e3a0a778b28bd ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -21,8 +21,6 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
-  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty" 1583617216 6501 4011d89d9621e0b0901138815ba5ff29 ""
   "/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty" 1572645307 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -63,11 +61,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "hw10.aux" 1649707302 32 4d1825978335c8847f72f7c473f9edc8 "pdflatex"
-  "hw10.tex" 1649707301 9674 e38950ff5cdd57f281cd63ecd7b852f3 ""
+  "quiz8.aux" 1649892757 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "quiz8.tex" 1649892757 2592 c639a60eea718ca3998e3a0a778b28bd ""
   (generated)
-  "hw10.pdf"
-  "hw10.log"
-  "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.pdf"
-  "hw10.aux"
-  "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.log"
+  "/Users/kinner/Documents/School/CMPSC360/Class Quiz 8/quiz8.log"
+  "quiz8.aux"
+  "/Users/kinner/Documents/School/CMPSC360/Class Quiz 8/quiz8.pdf"
+  "quiz8.log"
+  "quiz8.pdf"
