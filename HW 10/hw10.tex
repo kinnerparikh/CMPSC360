@@ -104,8 +104,8 @@
     Multiplying both sides of congruence by $c^{-1}$:
     \begin{alignat*}{2}
         55 \cdot 34x &\equiv 34 \cdot 34 \text{ mod } 89\ \\
-        x &\equiv 1156 \text{ mod } 89 && \text{[since 55 $\cdot$ 34 mod 29 = 1]}\\
-        x &\equiv 1156 = 88 \text{ mod } 89\ && \text{[since 143 mod 29 = 27]}
+        x &\equiv 1156 \text{ mod } 89 && \text{[since 55 $\cdot$ 34 mod 89 = 1]}\\
+        x &\equiv 1156 = 88 \text{ mod } 89\ && \text{[since 143 mod 89 = 27]}
     \end{alignat*}
 
     So, $x = 88 + 89k$ where $k \in \mathbb{Z}$ satisfies the congruence form: $55x = 34$ (mod 89)
@@ -183,32 +183,6 @@
     And 2427 mod 455 = 152
 
     Thus, $3^{2003}$ mod 455 = 152
-
-    % Since $3^{12} \equiv 1$ mod 455, we know that $3^{12^k} \equiv 1$ mod 455
-    % 
-    % So, $2003 = 12 \cdot 166 + 11$
-    % 
-    % Thus, $3^{2003} = 3^{12 \cdot 166 + 11}$
-    % 
-    % $3^{12 \cdot 166 + 11} = (3^{12})^{166} \cdot 3^{11}$ mod 455
-    % 
-    % \tabto{2.1cm} = $1^{166} \cdot 3^{11}$ mod 455
-    % 
-    % \tabto{2.1cm} = $3^{11}$ mod 455 
-    % 
-    % So $3^{11}$ mod 455 = $3^1 \cdot 3^2 \cdot 3^8$ mod 455
-    % 
-    % $3^1$ mod 455 = 3
-    % 
-    % $3^2$ mod 455 = 9
-    % 
-    % $3^4$ mod 455 = $9^2$ mod 455 = 81
-    % 
-    % $3^8$ mod 455 = $81^2$ mod 455 = 191
-    % 
-    % $3 \cdot 9 \cdot 191$ mod 455 = 5157 mod 455 = 152
-    % 
-    % So, $2^{2003}$ mod 455 = 152
 
     \newpage
     
@@ -349,9 +323,70 @@
 
     \newpage
 
-    \question[9]{}
+    \question[9a]{}
 
+    Proof:
+
+    We have to find that for every polynomial of degree $n$ with integer coefficients $f(x)$, 
     
+    we have $f (b_1) \equiv f (b_2)$ mod $p$.
     
+    We must prove that for every term like $a_k x^k$ in the polynomial $f (x)$ this property holds
     
+    Assume $b_ 1 \equiv b_2 \text{ mod }p$ such that $b_1, b_2, p \in \mathbb{Z}$
+
+    This means that, from the definition of congruence modulo, $p \mid (b_1 - b_2)$
+
+    \textbf{Case 1}: $b_1 + c \equiv b_2 + c \text{ mod } p$ for arbitrary integer $c$
+
+    \tabto{1cm} From the definition of congruence modulo, $p \mid [b_1 + c - (b_2 + c)]$ = $p \mid (b_1 - b_2)$
+
+    \tabto{1cm} So taking the reverse of the definition of congruence modulo, we get $b_1 \equiv b_2 \text{ mod } p$
+
+    \tabto{1cm} Thus, $b_1 \equiv b_2 \text{ mod } p \Rightarrow b_1 + c \equiv b_2 + c \text{ mod } p$ for arbitrary integer $c$
+
+    \textbf{Case 2}: $c \cdot b_1 \equiv c \cdot b_2 \text{ mod } p$ for arbitrary integer $c$
+
+    \tabto{1cm} From the definition of congruence modulo, $p \mid (c \cdot b_1 - c \cdot b_2)$ = $p \mid c \cdot (b_1 - b_2)$
+
+    \tabto{1cm} We know that as a property of division, if $a \mid b$, then $a \mid bt$. Similarly, we already know that 
+    
+    \tabto{1cm} $p \mid (b_1 - b_2)$, so we can say that $p \mid c \cdot (b_1 - b_2)$
+
+    \tabto{1cm} Thus, we know that $p \mid c \cdot (b_1 - b_2) = p \mid (b_1 - b_2)$
+    
+    \tabto{1cm} So taking the reverse of the definition of congruence modulo, we get $b_1 \equiv b_2 \text{ mod } p$
+
+    \tabto{1cm} Thus, $b_1 \equiv b_2 \text{ mod } p \Rightarrow c \cdot b_1 \equiv c \cdot b_2 \text{ mod } p$ for arbitrary integer $c$
+
+    \textbf{Case 3}: ${b_1}^k \equiv {b_2}^k \text{ mod } p$ for a positive integer $k$.
+
+    \tabto{1cm} From the definition of congruence modulo, $p \mid ({b_1}^k - {b_2}^k)$
+
+    \tabto{1cm} We proceed by induction on $k$
+
+    \tabto{1cm} \textbf{Base Case:} $(k = 1)$
+
+    \tabto{1.5cm} So $p \mid (b_1 - b_2)$, which we already know is true.
+
+    \tabto{1.5cm} The base case is proven
+
+    \tabto{1cm} \textbf{Inductive Hypothesis:} $(k = n)$
+
+    \tabto{1.5cm} For an arbitrary positive integer $n$, assume that  $p \mid ({b_1}^n - {b_2}^n)$
+
+    \tabto{1.5cm} From definition of divides, we get ${b_1}^n - {b_2}^n = p \cdot t$ where $t \in \mathbb{Z}$
+
+    \tabto{1cm} \textbf{Inductive Step:} $(k = n + 1)$
+
+    \tabto{1.5cm} We have to show that $p \mid ({b_1}^{n + 1} - {b_2}^{n + 1})$
+
+    \tabto{1.5cm} Expanding the expressions, we get: ${b_1}^{n + 1} - {b_2}^{n + 1} = b_1 \cdot {b_1}^n - b_2 \cdot {b_2}^n$
+
+    \tabto{1.5cm} 
+
+    \newpage
+
+    \question[9b]{}
+
 \end{document}
