@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1649987462 "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.tex" "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.pdf" "hw10" 1649987464
-  "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.aux" 1649987462 32 f852561997c05a7d986acd1deeb530ec ""
-  "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.tex" 1649987461 11611 9f17aa8e52e157cfbed1ca175c28ca8a ""
+["pdflatex"] 1649995109 "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.tex" "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.pdf" "hw10" 1649995110
+  "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.aux" 1649995110 32 f852561997c05a7d986acd1deeb530ec ""
+  "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.tex" 1649995109 12480 c0806da3b2fe267840a5deb7ee288e54 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -23,6 +23,7 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty" 1583617216 6501 4011d89d9621e0b0901138815ba5ff29 ""
@@ -64,11 +65,11 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1642538373 2724751 a36fae981622ae20f1086218c61fd1c6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "hw10.aux" 1649987462 32 f852561997c05a7d986acd1deeb530ec "pdflatex"
-  "hw10.tex" 1649987461 11611 9f17aa8e52e157cfbed1ca175c28ca8a ""
+  "hw10.aux" 1649995110 32 f852561997c05a7d986acd1deeb530ec "pdflatex"
+  "hw10.tex" 1649995109 12480 c0806da3b2fe267840a5deb7ee288e54 ""
   (generated)
-  "hw10.log"
-  "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.log"
   "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.pdf"
   "hw10.aux"
   "hw10.pdf"
+  "hw10.log"
+  "/Users/kinner/Documents/School/CMPSC360/HW 10/hw10.log"

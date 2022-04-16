@@ -367,26 +367,50 @@
 
     \tabto{1cm} \textbf{Base Case:} $(k = 1)$
 
-    \tabto{1.5cm} So $p \mid (b_1 - b_2)$, which we already know is true.
+    \tabto{1.5cm} So $b_1 \equiv b_2 \text{ mod } p$, which we already know is true.
 
     \tabto{1.5cm} The base case is proven
 
     \tabto{1cm} \textbf{Inductive Hypothesis:} $(k = n)$
 
-    \tabto{1.5cm} For an arbitrary positive integer $n$, assume that  $p \mid ({b_1}^n - {b_2}^n)$
-
-    \tabto{1.5cm} From definition of divides, we get ${b_1}^n - {b_2}^n = p \cdot t$ where $t \in \mathbb{Z}$
+    \tabto{1.5cm} For an arbitrary positive integer $n$, assume that ${b_1}^n \equiv {b_2}^n \text{ mod } p$
 
     \tabto{1cm} \textbf{Inductive Step:} $(k = n + 1)$
 
-    \tabto{1.5cm} We have to show that $p \mid ({b_1}^{n + 1} - {b_2}^{n + 1})$
+    \tabto{1.5cm} We have to show that ${b_1}^{n + 1} \equiv {b_2}^{n + 1} \text{ mod } p$
 
-    \tabto{1.5cm} Expanding the expressions, we get: ${b_1}^{n + 1} - {b_2}^{n + 1} = b_1 \cdot {b_1}^n - b_2 \cdot {b_2}^n$
+    \tabto{1.5cm} Expanding both sides: $b_1 \cdot {b_1}^n \equiv b_2 \cdot {b_2}^n \text{ mod } p$
 
-    \tabto{1.5cm} 
+    \tabto{5.07cm} $b_1 \cdot {b_1}^n \equiv (b_2 \text{ mod } p \cdot {b_2}^n \text{ mod } p) \text{ mod } p$
+
+    \tabto{1.5cm} From the base case and inductive hypothesis, we can say that ${b_1}^{n + 1} \equiv {b_2}^{n + 1} \text{ mod } p$
+
+    \tabto{1cm} Therefore, we can say that $\forall k \in \mathbb{Z}^+;\ {b_1}^k \equiv {b_2}^k \text{ mod } p$
+
+    Therefore, we can say that $f({b_1}) \equiv f({b_2}) \text{ mod } p. \ \square$
 
     \newpage
 
     \question[9b]{}
+
+    Proof:
+
+    Assume that we are in the decimal number system, $z \in \mathbb{Z}$, and $9 \mid z$.
+
+    We can write $z$ as $(a_k a_{k - 1} a_{k - 2} ... a_0)$, where $a_k$ represents a digit of $z$
+
+    Using the conclusion we reached in the previous question, we know that:
+    
+    \tabto{4cm} $f(x) = a_kx^k + a_{k - 1}x^{k - 1} + ... + a_0$
+
+    $x$ represents the base of the number system. 
+
+    So we can say that $f(10) = z$, and because of this, we know that $b_1 \equiv b_2 \text{ mod } p$
+
+    Thus we can say that $(n - 1) \mid z$
+
+
+
+
 
 \end{document}
