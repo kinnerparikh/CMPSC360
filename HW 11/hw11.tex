@@ -1,0 +1,145 @@
+\documentclass{article} % This command is used to set the type of document you are working on such as an article, book, or presenation
+
+\usepackage{geometry} % This package allows the editing of the page layout
+\usepackage{amsmath}  % This package allows the use of a large range of mathematical formula, commands, and symbols
+\usepackage{graphicx}  % This package allows the importing of images
+\usepackage{soul}
+\usepackage{amsfonts}
+\usepackage{dirtytalk}
+\usepackage{tabto}
+\usepackage{xcolor,colortbl, amssymb}
+
+% https://www.messletters.com/en/big-text/
+
+\newcommand{\question}[2][]{\begin{flushleft}
+        \textbf{Question #1}: \textit{#2}
+
+\end{flushleft}}
+
+\newcommand{\comb}[2][]{
+    {}_{#1} C_{#2}
+}
+
+\newcommand{\perm}[2]{
+    {}_{#1} P_{#2}
+}
+
+\newcommand{\fl}[1]{
+    \lfloor \frac{10000}{#1} \rfloor
+}
+
+\definecolor{Green}{rgb}{0, 1, 0}
+\definecolor{Pink}{rgb}{1, .753, .796}
+
+\newcommand{\sol}{\textbf{Solution}:} %Use if you want a boldface solution line
+%\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+\newcommand{\maketitletwo}[2][]{\begin{center}
+        \Large{\textbf{Homework #1}
+            
+            CMPSC 360} % Name of course here
+        \vspace{5pt}
+        
+        \normalsize{Kinner Parikh  % Your name here
+        
+        \today}        % Change to due date if preferred
+        \vspace{15pt}
+        
+\end{center}}
+\begin{document}
+    \maketitletwo[11]  % Optional argument is assignment number
+    %Keep a blank space between maketitletwo and \question[1]
+    
+    \question[1]{}
+
+    a) How many edges are there in a graph with 10 vertices, each having a degree 3? | \textbf{15}
+
+    b) How many edges are there in a graph with 8 vertices, having a degree 1,1,2,2,3,3,3,3 
+    \tabto{1cm}respectively? | \textbf{9}
+
+    c)  How many vertices are there in a graph with 19 edges, having 3 vertices of degree 4 and all 
+    \tabto{0.96cm}the other vertices are of degree 2? | \textbf{13}
+
+    \question[2]{}
+
+    With repetition: $6! = 720$
+
+    Without repetition: $\frac{6!}{2} = 360$
+
+    \question[3]{}
+
+    a) $\frac{10!}{2!} = 1814400$
+
+    b) $\frac{8!}{2!} \cdot 5! = 2419200$
+
+    c) $\frac{10!}{2!} \cdot 2 \cdot 7 = 10! \cdot 7 = 25401600$
+
+    \question[4]{}
+
+    ${}_2 C_1 \cdot {}_5 C_2 + {}_2 C_2 \cdot {}_5 C_1 = 25$
+
+    \question[5]{}
+
+    $4^3 - 1 = 63$
+
+    \question[6]{}
+
+    No
+
+    \question[7]{}
+
+    \newpage
+
+    \question[8]{}
+
+    The five cases are: $x_2 = \{0, 1, 2, 3, 4\}$
+
+    When $x_2 = 0$
+
+    \tabto{1cm} $x_1 + x_3 + x_4 = 10$, so ${}_{12} C_2$
+
+    When $x_2 = 1$
+
+    \tabto{1cm} $x_1 + x_3 + x_4 = 9$, so ${}_{11} C_2$
+
+    When $x_2 = 2$
+
+    \tabto{1cm} $x_1 + x_3 + x_4 = 8$, so ${}_{10} C_2$
+
+    When $x_2 = 3$
+
+    \tabto{1cm} $x_1 + x_3 + x_4 = 7$, so ${}_{9} C_2$
+
+    When $x_2 = 4$
+
+    \tabto{1cm} $x_1 + x_3 + x_4 = 6$, so ${}_{8} C_2$
+
+    So, ${}_{12} C_2 + {}_{11} C_2 + {}_{10} C_2 + {}_{9} C_2 + {}_{8} C_2 = 230$
+
+    \question[9]{}
+
+    $\comb[4]{0} \cdot 3^0 \cdot (2x)^4 + \comb[4]{1} \cdot 3^1 \cdot (2x)^3 + \comb[4]{2} \cdot 3^2 \cdot (2x)^2 + \comb[4]{3} \cdot 3^3 \cdot (2x)^1 + \comb[4]{4} \cdot 3^4 \cdot (2x)^0$
+
+    $= 16x^4 + 96x^3 + 216x^2 + 216x + 81$
+
+    \question[14]{}
+
+    $\fl{3} + \fl{5} + \fl{7} + \fl{11} - \fl{15} - \fl{21} - \fl{33} - \fl{35} - \fl{55} - \fl{33}$
+
+    \vspace{0.2cm}
+    $- \fl{105} - \fl{165} - \fl{231} - \fl{385} - \fl{1155} = 5485$
+
+    \question[15]{}
+
+    $\perm{20}{15} = \frac{20!}{15!} = 1860480$
+
+    \question[16]{}
+
+    $\perm{6}{3} + \perm{6}{2} = 120 + 30 = 150$
+
+    $\perm{7}{2} + 6 + 6 = 42 + 12 = 54$
+
+    So in total, they can watch 150 + 54 = \underline{204 movies}
+
+
+    
+\end{document}
