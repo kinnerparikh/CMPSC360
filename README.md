@@ -24,3 +24,21 @@ Work for the Penn State CMPSC 360: Discrete Mathematics for Computer Science, Sp
 - [Assignment 10](https://github.com/kinnerparikh/CMPSC360/blob/main/HW%2010/hw10.pdf)
 
 - [Assignment 11](https://github.com/kinnerparikh/CMPSC360/blob/main/HW%2011/hw11.pdf)
+
+## Links to Quizzes
+
+- [Quiz 1](https://github.com/kinnerparikh/CMPSC360/blob/main/Class%20Quiz%201/quiz1.pdf)
+
+- [Quiz 2](https://github.com/kinnerparikh/CMPSC360/blob/main/Class%20Quiz%202/quiz2.pdf)
+
+- [Quiz 3](https://github.com/kinnerparikh/CMPSC360/blob/main/Class%20Quiz%203/quiz3.pdf)
+
+- [Quiz 4](https://github.com/kinnerparikh/CMPSC360/blob/main/Class%20Quiz%204/quiz4.pdf)
+
+- [Quiz 5](https://github.com/kinnerparikh/CMPSC360/blob/main/Class%20Quiz%205/quiz5.pdf)
+
+- [Quiz 6](https://github.com/kinnerparikh/CMPSC360/blob/main/Class%20Quiz%206/quiz6.pdf)
+
+- [Quiz 7](https://github.com/kinnerparikh/CMPSC360/blob/main/Class%20Quiz%207/quiz7.pdf)
+
+- [Quiz 8](https://github.com/kinnerparikh/CMPSC360/blob/main/Class%20Quiz%208/quiz8.pdf)
